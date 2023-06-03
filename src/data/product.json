@@ -1,0 +1,46 @@
+[
+    {
+        "name": "King's Chicken [ Rasa Baru ]",
+        "image": "./../assets/product/p1.jpg"
+    },
+    {
+        "name": "Special Menu",
+        "image": "./../assets/product/p2.jpg"
+    },
+    {
+        "name": "Tropical Whopper [ Limited Time ]",
+        "image": "./../assets/product/p3.jpg"
+    },
+    {
+        "name": "BK APP EXCLUSIVE",
+        "image": "./../assets/product/p4.jpg"
+    },
+    {
+        "name": "Cheese Burger Favorit",
+        "image": "./../assets/product/p5.jpg"
+    },
+    {
+        "name": "Cheese Whopper",
+        "image": "./../assets/product/p6.jpg"
+    },
+    {
+        "name": "Gold Collection",
+        "image": "./../assets/product/p7.jpg"
+    },
+    {
+        "name": "Kids Meal",
+        "image": "./../assets/product/p8.jpg"
+    },
+    {
+        "name": "Side & Dessert",
+        "image": "./../assets/product/p9.jpg"
+    },
+    {
+        "name": "BEVERAGES",
+        "image": "./../assets/product/p10.jpg"
+    },
+    {
+        "name": "KING DEALS",
+        "image": "./../assets/product/p11.jpg"
+    }
+]
