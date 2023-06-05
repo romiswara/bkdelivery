@@ -10,7 +10,7 @@ const SearchComp = () => {
             <Form.Control
                 placeholder="Search menu..."
             />
-            <InputGroup.Text id="basic-addon2">
+            <InputGroup.Text className='search__button'>
                 <FontAwesomeIcon icon={faSearch} />
             </InputGroup.Text>
         </InputGroup>

@@ -7,7 +7,7 @@ const ProductComp = ({ data }) => {
     const navigate = useNavigate();
     const onClickFunc = (path) => {
       
-        navigate(`/menus/${path}`)
+        navigate(`/products/${path}`)
     }
     return <div className='menu-box'>
         <div className='mb-3'>

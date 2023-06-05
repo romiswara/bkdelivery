@@ -10,6 +10,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TosPage from "./pages/TosPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
+import ProductSingePage from "./pages/ProductSinglePage";
 
 const router = createBrowserRouter([
     {
@@ -60,6 +61,11 @@ const router = createBrowserRouter([
     {
         path: "/products",
         element: <ProductsPage />,
+        // errorElement: <ErrorPage />,
+    },
+    {
+        path: "/products/:slug",
+        element: <ProductSingePage />,
         // errorElement: <ErrorPage />,
     },
     {

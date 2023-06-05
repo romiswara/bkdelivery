@@ -17,7 +17,7 @@ const HomePage = () => {
             </Row>
             <Row>
                 {productList.map(p => {
-                    return <Col md={4}><ProductComp data={p}></ProductComp> </Col>
+                    return <Col md={4} sm={6} xs={6}><ProductComp data={p}></ProductComp> </Col>
                 })}
             </Row>
         </Container>

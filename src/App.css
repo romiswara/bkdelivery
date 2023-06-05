@@ -211,6 +211,10 @@ body {
   padding-top: 85px;
 }
 
+.search__button {
+  background-color: var(--primary) !important;
+  color: var(--light) !important;
+}
 .footer {
   background-color: var(--dark);
   color: var(--light);
@@ -298,6 +302,12 @@ body {
 
 
 @media screen and (max-width:1024px) {
+
+  .container {
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+  }
+  
   .hidedesktop {
     display: block !important;
   }
@@ -363,13 +373,16 @@ body {
   }
 
   .cart__notif {
-
     position: absolute;
     margin-left: 60px !important;
     margin-top: -50px !important;
     text-align: center;
   }
 
+/* 
+  .menu-box {
+    width: 100%;
+  } */
 
 
   /* footer */
