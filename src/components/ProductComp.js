@@ -10,7 +10,7 @@ const ProductComp = ({ data }) => {
         navigate(`/menus/${path}`)
     }
     return <div className='menu-box'>
-        <div>
+        <div className='mb-3'>
             <img src={data.image} className='img-fluid' />
         </div>
         <Row>
@@ -19,7 +19,7 @@ const ProductComp = ({ data }) => {
                 {data.price != undefined && <h5 style={{ textAlign: 'left' }}>{data.price}</h5>}
             </Col>
             <Col md={6}>
-                <ButtonComp className="button-primary" text="Order" onClickCB={() => onClickFunc(data.slug)}></ButtonComp>
+                <ButtonComp width="100%" className="button-primary" text="Order" onClickCB={() => onClickFunc(data.slug)}></ButtonComp>
             </Col>
         </Row>
     </div>

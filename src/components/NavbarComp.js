@@ -80,7 +80,7 @@ const NavbarComp = () => {
           
         </div>
         <div>
-            {showSidebar &&    <div onClick={() => navigateTo('/accounts/login')}>Login</div> }
+            {showSidebar && <div onClick={() => navigateTo('/accounts/login')}>Login</div> }
          
         </div>
         <div>

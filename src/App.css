@@ -18,19 +18,24 @@
   src: local("FlameBold"),
     url("./fonts/FlameBold.otf") format("truetype");
 }
+
 .container {
   padding-left: 10% !important;
   padding-right: 10% !important;
 }
+
 .teks-primary {
   color: var(--primary) !important;
 }
+
 .hidedesktop {
   display: none !important;
 }
+
 body {
   background-color: #F9F4F2 !important;
 }
+
 .body {
   background-image: url('./assets/BK_bg.jpg');
   background-size: cover;
@@ -106,8 +111,11 @@ body {
 
 .navbarBK div:nth-child(3) {
   width: 100px;
-  margin-top: -3px;
+  margin-top: 80px;
   margin-left: 30px;
+  background-color: none !important;
+  background: none !important;
+  font-size: 24px;
 }
 
 .navbarBK div:nth-child(3) a {
@@ -128,6 +136,7 @@ body {
   background-color: var(--primary);
   text-align: center;
 }
+
 .navbarBK div:nth-child(5) {
   position: absolute;
   left: 20px;
@@ -149,6 +158,7 @@ body {
   font-size: 30px;
   cursor: pointer;
 }
+
 .cart {
   margin: 0px;
   padding: 0px;
@@ -178,16 +188,19 @@ body {
 
 .menu-box {
   float: left;
-  margin-bottom: 2%;
-  margin-right: 20px;
-  padding: 20px;
+  margin: 20px 0px;
+  padding: 20px 20px 30px 20px;
   background-color: #fff;
   border-radius: 10px;
   text-align: center;
   box-sizing: border-box;
   box-shadow: 2px 2px 15px -4px #6b6b6b;
+  height: 360px;
 }
-
+.menu-box h5 {
+  color: #8B542F;
+  font-family: FlameBold;
+}
 .bodybg {
   background-image: url('./assets/BK_bg.jpg');
   background-size: cover;
@@ -199,16 +212,73 @@ body {
 }
 
 .footer {
-  
   background-color: var(--dark);
   color: var(--light);
   font-family: 'FlameRegular';
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
+  margin-top: 30px;
 }
+
 .footer__logo {
   font-size: 20px;
   font-family: "FlameRegular";
+}
+
+.footer__call {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+}
+
+.footer__call div:first-child {
+  width: 130px;
+}
+
+.footer__call div:nth-child(2) {
+  width: 280px;
+}
+
+.footer__call div:nth-child(3) {
+  width: 240px;
+}
+
+.footer__link {
+  display: flex;
+  color: #919191;
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 15px;
+}
+
+.footer__link div:nth-child(1) {
+  padding-right: 15px;
+  height: 15px;
+  border-right: solid 1px #919191;
+}
+
+.footer__link div:nth-child(2) {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 15px;
+  border-right: solid 1px #919191;
+}
+
+.footer__link div:nth-child(3) {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 15px;
+  border-right: solid 1px #919191;
+}
+
+.footer__link div:nth-child(4) {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 15px;
+
 }
 
 .content-block {
@@ -229,8 +299,9 @@ body {
 
 @media screen and (max-width:1024px) {
   .hidedesktop {
-    display:block !important;
+    display: block !important;
   }
+
   .logo {
     width: 40px;
     height: 40px;
@@ -247,7 +318,8 @@ body {
   .navbarBK>* {
     padding: 7px 0;
   }
-  .navbarBK div:nth-child(2)::before{
+
+  .navbarBK div:nth-child(2)::before {
     height: 100vh;
   }
 
@@ -256,13 +328,14 @@ body {
     position: absolute;
     left: -30px;
     top: 50px;
-    background-color: #000;
+    background-color: #2D2D2D;
     padding-left: 30px;
 
   }
 
   .navbarBK .list-inline {
     display: block;
+    margin-top: 20px;
   }
 
   .navbarBK div:nth-child(3) {
@@ -278,9 +351,11 @@ body {
     right: 0;
     height: 100%;
   }
+
   .navbarBK div:nth-child(5) {
     display: block;
   }
+
   .cart__wrapper {
     width: 100%;
     position: relative;
@@ -288,11 +363,67 @@ body {
   }
 
   .cart__notif {
-    
+
     position: absolute;
     margin-left: 60px !important;
     margin-top: -50px !important;
     text-align: center;
   }
 
+
+
+  /* footer */
+
+  .footer__logo {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .footer__call {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  .footer__call div:first-child {
+    width: 100%;
+  }
+
+  .footer__call div:nth-child(2) {
+    width: 100%;
+  }
+
+  .footer__call div:nth-child(3) {
+    width: 100%;
+  }
+
+  .footer__link {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .footer__link div:nth-child(1) {
+    margin: 5px 10px;
+    color: #fff;
+    border-right: solid 0px #919191;
+  }
+
+  .footer__link div:nth-child(2) {
+    margin: 5px 10px;
+    color: #fff;
+    border-right: solid 0px #919191;
+  }
+
+  .footer__link div:nth-child(3) {
+    margin: 5px 10px;
+    color: #fff;
+    border-right: solid 0px #919191;
+  }
+
+  .footer__link div:nth-child(4) {
+    margin: 15px 10px;
+
+  }
 }

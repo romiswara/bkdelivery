@@ -27,28 +27,27 @@ const FooterComp = () => {
         <Container>
             <Row>
                 <h4 className='footer__logo'>BURGER KING® DELIVERY</h4>
-          
-                <div style={{ display: 'flex' }}>
-                   <div style={{flex:1}}>
-                   <FontAwesomeIcon icon={faPhone} />
+                <div className='footer__call'>
+                    <div>
+                        <FontAwesomeIcon icon={faPhone} />
                         1500025
-                   </div>
-                   <div style={{flex:1}}>
-                   <FontAwesomeIcon icon={faEnvelope} /> guestservice@burgerking.co.id
-                   </div>
-                   <div style={{flex:1}}>
-                   <a style={{ marginLeft: '7px' }}> <FontAwesomeIcon icon={faFacebook} /></a>
+                    </div>
+                    <div>
+                        <FontAwesomeIcon icon={faEnvelope} /> guestservice@burgerking.co.id
+                    </div>
+                    <div>
+                        <a style={{ marginLeft: '7px' }}> <FontAwesomeIcon icon={faFacebook} /></a>
                         <a style={{ marginLeft: '7px' }}><FontAwesomeIcon icon={faInstagram} /></a>
                         <a style={{ marginLeft: '7px' }}> <FontAwesomeIcon icon={faTwitter} /></a>
                         <a style={{ marginLeft: '7px' }}><FontAwesomeIcon icon={faYoutube} /></a>
-                   </div>
+                    </div>
                 </div>
-                <div style={{ display: 'flex' }}>
+                <div className='footer__link'>
                     {menus.map(menu => {
-                        return <div style={{ flex: 1 }}>{menu.label}</div>
+                        return <div>{menu.label}</div>
                     })}
                 </div>
-             
+
             </Row>
         </Container>
     </div>
