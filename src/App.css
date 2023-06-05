@@ -18,11 +18,19 @@
   src: local("FlameBold"),
     url("./fonts/FlameBold.otf") format("truetype");
 }
-
+.container {
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
 .teks-primary {
   color: var(--primary) !important;
 }
-
+.hidedesktop {
+  display: none !important;
+}
+body {
+  background-color: #F9F4F2 !important;
+}
 .body {
   background-image: url('./assets/BK_bg.jpg');
   background-size: cover;
@@ -220,6 +228,9 @@
 
 
 @media screen and (max-width:1024px) {
+  .hidedesktop {
+    display:block !important;
+  }
   .logo {
     width: 40px;
     height: 40px;

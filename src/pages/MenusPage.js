@@ -43,9 +43,13 @@ const MenusPage = () => {
                     <small>* Harga belum termasuk pajak</small>
                 </Col>
                 <Col md={10} sm={12}>
-                    {listProduct.map((product, index) => {
-                        return <ProductComp data={product}></ProductComp>
+                   <Row>
+                   {listProduct.map((product, index) => {
+                        return <Col md={6} sm={12}>
+                            <ProductComp data={product}></ProductComp>
+                        </Col>
                     })}
+                   </Row>
                 </Col>
             </Row>
         </Container>

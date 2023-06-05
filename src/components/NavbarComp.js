@@ -69,7 +69,7 @@ const NavbarComp = () => {
         <div>
             {showSidebar &&   <ul className='list'>
                 {menus.map((menu, index) => {
-                    return <li key={index} className='list-inline' onClick={() => navigateTo(menu.path)}>
+                    return <li key={index} className={menu.menu=="Home"?'list-inline hidedesktop':'list-inline'} onClick={() => navigateTo(menu.path)}>
                         <ul>
                             <li className='teks-primary'>{menu.label}</li>
                             <li>{menu.menu}</li>

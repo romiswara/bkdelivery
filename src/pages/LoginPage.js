@@ -69,8 +69,8 @@ const LoginPage = () => {
            
             <Row>
                 <Col md={{
-                    span: 4,
-                    offset: 4
+                    span: 6,
+                    offset: 3
                 }} >
                     <div className="card" >
                         <div className="card-body">
