@@ -1,46 +1,103 @@
 [
     {
         "name": "King's Chicken [ Rasa Baru ]",
-        "image": "./../assets/product/p1.jpg"
+        "image": "./../assets/product/p1.jpg",
+        "slug":"kings-chicken-rasa-baru",
+        "variant": [
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/5/8/dlydc99j3tuuvaslic6fmc_product_list.jpg",
+                "name":"Paket Crispy 1",
+                "price":25000
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/5/8/nnbbuudkh4ahdbv2jusmd5_product_list.jpg",
+                "name":"Paket Crispy 2",
+                "price":45000
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/5/8/jqltoluxauxcpl8c9cyuis_product_list.jpg",
+                "name":"Paket Crispy 5",
+                "price":115000
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/5/8/kdrkheurthqgh2vg3zprrf_product_list.jpg",
+                "name":"5 Pcs Ayam Crispy",
+                "price":90909
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/5/10/mwth5rjf4bwuwdtw85gzdp_product_list.jpg",
+                "name":"5 Pcs Ayam Spicy",
+                "price":90909,
+                "isSpicy":true
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/5/9/sdjqw9twkk5ryz9paaxah6_product_list.jpg",
+                "name":"Paket Spicy 1",
+                "price":25000,
+                "isSpicy":true
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/5/9/bbnyo6fetzlgf65wive9e3_product_list.jpg",
+                "name":"Paket Spicy 2",
+                "price":45000,
+                "isSpicy":true
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/5/9/bhr49ukcv8g9dsdrayiwgu_product_list.jpg",
+                "name":"Paket Spicy 5",
+                "price":115000,
+                "isSpicy":true
+            }
+        ]
     },
     {
         "name": "Special Menu",
-        "image": "./../assets/product/p2.jpg"
+        "image": "./../assets/product/p2.jpg",
+        "slug":"special-menu"
     },
     {
         "name": "Tropical Whopper [ Limited Time ]",
-        "image": "./../assets/product/p3.jpg"
+        "image": "./../assets/product/p3.jpg",
+        "slug":"tropical-whopper-limited-time"
     },
     {
         "name": "BK APP EXCLUSIVE",
-        "image": "./../assets/product/p4.jpg"
+        "image": "./../assets/product/p4.jpg",
+        "slug":"bk-app-exclusive"
     },
     {
         "name": "Cheese Burger Favorit",
-        "image": "./../assets/product/p5.jpg"
+        "image": "./../assets/product/p5.jpg",
+        "slug":"cheese-burger-favorit"
     },
     {
         "name": "Cheese Whopper",
-        "image": "./../assets/product/p6.jpg"
+        "image": "./../assets/product/p6.jpg",
+        "slug":"cheese-whopper-2"
     },
     {
         "name": "Gold Collection",
-        "image": "./../assets/product/p7.jpg"
+        "image": "./../assets/product/p7.jpg",
+        "slug":"gold-collection"
     },
     {
         "name": "Kids Meal",
-        "image": "./../assets/product/p8.jpg"
+        "image": "./../assets/product/p8.jpg",
+        "slug":"kids-meal"
     },
     {
         "name": "Side & Dessert",
-        "image": "./../assets/product/p9.jpg"
+        "image": "./../assets/product/p9.jpg",
+        "slug":"side-dessert"
     },
     {
         "name": "BEVERAGES",
-        "image": "./../assets/product/p10.jpg"
+        "image": "./../assets/product/p10.jpg",
+        "slug":"beverages"
     },
     {
         "name": "KING DEALS",
-        "image": "./../assets/product/p11.jpg"
+        "image": "./../assets/product/p11.jpg",
+        "slug":"king-deals  "
     }
 ]
