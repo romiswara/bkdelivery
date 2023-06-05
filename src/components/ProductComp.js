@@ -13,7 +13,8 @@ const ProductComp = ({ data }) => {
         </div>
         <Row>
             <Col md={6}>
-                <h5 style={{textAlign:'left'}}>{data.name}</h5>
+                <h5 style={{ textAlign: 'left' }}>{data.name}</h5>
+                {data.price != undefined && <h5 style={{ textAlign: 'left' }}>{data.price}</h5>}
             </Col>
             <Col md={6}>
                 <ButtonComp className="button-primary" text="Order" onClickCB={() => onClickFunc()}></ButtonComp>

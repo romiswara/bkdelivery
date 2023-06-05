@@ -1,0 +1,109 @@
+[
+    {
+        "image":"https://bkdelivery.co.id/media/landscape_image/2023/5/17/y5vpy4rvgzsttwrriei4bq.jpg",
+        "image2":"https://bkdelivery.co.id/media/hero_image/2023/5/17/ku6yuczaq3qipb4sh7bzxe.jpg",
+        "title":"Cheeseburger 10K",
+        "slug":"cheeseburger-10k",
+        "syarat": [
+            {
+                "ketentuan":"Promo berlaku pada 1 - 7 Juni 2023"
+            },
+            {
+                "ketentuan":"Promo Cheeseburger dengan harga Rp.10.000 dengan minimum pembelian Rp.60.000"
+            },
+            {
+                "ketentuan":"Promo berlaku nasional untuk semua metode melalui BK Apps Delivery, Contactless Dine-in, atau Pre-order Takeaway"
+            },
+            {
+                "ketentuan":"Promo dalam bentuk kupon diberikan saat login"
+            },
+            {
+                "ketentuan":"Kupon dapat digunakan sebanyak satu (1) kali per hari"
+            },
+            {
+                "ketentuan":"Kupon hanya diberikan pada pengguna yang sudah terdaftar sebelum tanggal 1 Juni 2023"
+            }
+        ]
+    },
+    {
+        "image":"https://bkdelivery.co.id/media/landscape_image/2023/4/19/6qasxyu9lyrltgr3gzkysf.jpg",
+        "image2":"https://bkdelivery.co.id/media/hero_image/2023/4/19/n5urabwsxed89y3zr7kr23.jpg",
+        "title":"Begadang Kenyang",
+        "slug":"begadang-kenyang",
+        "syarat": [
+            {
+                "ketentuan":"Promo berlaku pada 1 - 15 Juni 2023"
+            },
+            {
+                "ketentuan":"Berlaku hanya pada jam 22.00 - 04.00 WIB"
+            },
+            {
+                "ketentuan":"Diskon 50% senilai hingga Rp40.000, dengan minimum transaksi senilai Rp60.000"
+            },
+            {
+                "ketentuan":"Promo ini tidak berlaku untuk produk promo lainnya, seperti: King's Chicken,, King Deals, Side & Dessert, BK App Exclusive Menu, Whopper Wednesday, Friyay Chicken dan Kupon Mei"
+            },
+            {
+                "ketentuan":"Promo berlaku nasional untuk Delivery, Contactless Dine-in, atau Pre-order Takeaway"
+            },
+            {
+                "ketentuan":"Promo dalam bentuk kupon diberikan saat login"
+            },
+            {
+                "ketentuan":"Setiap kupon hanya dapat digunakan sebanyak satu (1) kali selama periode promo"
+            },
+            {
+                "ketentuan":"Kupon hanya diberikan pada pengguna yang sudah terdaftar sebelum tanggal 1 Juni 2023"
+            }
+        ]
+    },
+    {
+        "image":"https://bkdelivery.co.id/media/landscape_image/2023/3/7/9upbgojkbfesyzqxpengik.jpg",
+        "image2":"https://bkdelivery.co.id/media/hero_image/2023/3/7/njubjjqmg8yef7vdtpnd9t.jpg",
+        "title":"Promo Mandiri 50%",
+        "slug":"promo-mandiri-50",
+        "syarat": [
+            {
+                "ketentuan":"Cashback 50% maksimal Rp 25.000 dengan minimal transaksi Rp 50.000"
+            },
+            {
+                "ketentuan":"Berlaku setiap hari hingga 30 Juni 2023"
+            },
+            {
+                "ketentuan":"Nasabah wajib memiliki aplikasi Livin' by Mandiri (logo kuning) terbaru yang sudah memiliki fitur QRIS Payment dengan Mandiri Kartu Kredit"
+            },
+            {
+                "ketentuan":"Cashback berlaku maksimal 1 kali/nasabah/merchant/minggu"
+            },
+            {
+                "ketentuan":"Berlaku untuk Dine-in, Drive-Thru & Takeaway"
+            }
+        ]
+    },
+    {
+        "image":"https://bkdelivery.co.id/media/landscape_image/2023/1/18/mez28xqf8xytdfzprxx2an.jpg",
+        "image2":"https://bkdelivery.co.id/media/hero_image/2023/1/18/wgezpclsoytdefsqgk4vnk.jpg",
+        "title":"Birthday Voucher",
+        "slug":"birthday-voucher",
+        "syarat": [
+            {
+                "ketentuan":"Diskon 50% senilai hingga Rp45.000, dengan minimum transaksi Rp60.000"
+            },
+            {
+                "ketentuan":"Kupon ini tidak berlaku untuk produk promo lainnya, seperti: King's Chicken, Apps Exclusive Menu, King Deals, Side & Dessert, Whopper Wednesday, Friyay Chicken dan Kupon pada bulan tersebut"
+            },
+            {
+                "ketentuan":"Promo berlaku nasional untuk transaksi jenis apapun melalui www.bkdelivery.co.id dan Aplikasi BK (baik untuk Delivery order, Contactless Dine-in, atau Pre-Order Takeaway)"
+            },
+            {
+                "ketentuan":"Promo dalam bentuk kupon diberikan saat login"
+            },
+            {
+                "ketentuan":"Setiap kupon hanya dapat digunakan sebanyak satu (1) kali selama periode tahun tersebut 8 Setiap pengguna hanya dapat memperoleh satu (1) kupon promo"
+            },
+            {
+                "ketentuan":"Periode kupon berlaku 2 minggu setelah mendapatkan kupon yang akan diberikan pada 6 hari sebelum hari ulang tahun"
+            }
+        ]
+    }
+]

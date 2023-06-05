@@ -53,51 +53,728 @@
     {
         "name": "Special Menu",
         "image": "./../assets/product/p2.jpg",
-        "slug":"special-menu"
+        "slug":"special-menu",
+        "variant": [
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/4/13/h5nfxczgamrabknc4wjcve_product_list.jpg",
+                "name":"King Fusion Nastar Crumble",
+                "price":15000
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/l2clymbjfvruqvjffbgjka_product_list.jpg",
+                "name":"Paket 1 Pcs Ayam Madura",
+                "price":35909,
+                "size":"medium"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/wm9ik4g86arxinc4kerbbw_product_list.jpg",
+                "name":"Paket 2 Pcs Ayam Madura",
+                "price":51364,
+                "size":"medium"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/gwyteupm774nnccwr5rscb_product_list.jpg",
+                "name":"King Box Ayam Madura Regular",
+                "price":51364,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/gfqn8ifqpsgkukqp9h4rbz_product_list.jpg",
+                "name":"King Box Ayam Madura",
+                "price":63637,
+                "size":"large"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/17/tkahh7mdwki9ayq9ghrutr_product_list.jpg",
+                "name":"Paket 5 Pcs Ayam Madura",
+                "price":134545
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/mhtkembkannnsdbtzjoqoq_product_list.jpg",
+                "name":"Paket Rame - Rame Ayam Madura",
+                "price":240000
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/17/tppqh4txqshurbwz9ezy5t_product_list.jpg",
+                "name":"1 Pc Ayam Madura",
+                "price":25000
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/vv4zvbscvy5upw59n7opbm_product_list.jpg",
+                "name":"2 PCS AYAM MADURA",
+                "price":45000
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/16/eckhblp9tstqx6rrfcd2cy_product_list.jpg",
+                "name":"Bumbu Madura BK",
+                "price":7273
+            }
+        ]
     },
     {
         "name": "Tropical Whopper [ Limited Time ]",
         "image": "./../assets/product/p3.jpg",
-        "slug":"tropical-whopper-limited-time"
+        "slug":"tropical-whopper-limited-time",
+        "variant": [
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/15/hzwn4jtpf6dhgfqfp5xdkg_product_list.jpg",
+                "name":"King Box Tropical Whopper",
+                "price":90909,
+                "size":"medium"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/15/8iu2hpxdrl7ecaapwehk2a_product_list.jpg",
+                "name":"King Box Tropical Whopper",
+                "price":66364,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/g3mqcprctts92bkfmvj8jj_product_list.jpg",
+                "name":"Paket Tropical Whopper",
+                "price":79545,
+                "size":"medium"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/9ajlcnrztvtycazvv9y9tk_product_list.jpg",
+                "name":"Paket Tropical Whopper",
+                "price":55000,
+                "size":"Jr Regular"
+            }
+        ]
     },
     {
         "name": "BK APP EXCLUSIVE",
         "image": "./../assets/product/p4.jpg",
-        "slug":"bk-app-exclusive"
+        "slug":"bk-app-exclusive",
+        "variant": [
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/98mmiliweaesnsyqgrqz6m_product_list.jpg",
+                "name":"App Exc BBQ Beef Rasher",
+                "price":23182,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/trqkoqzxm32tkxjvpsw2he_product_list.jpg",
+                "name":"8 Pcs Ayam",
+                "price":100000,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/23/77xt8rja7zswxnnbp7pn3j_product_list.jpg",
+                "name":"BOGO Paket Besar 1",
+                "price":54545,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/mmxqphb4bpyayh6cdknhic_product_list.jpg",
+                "name":"Promo 4 Pcs Ayam",
+                "price":55000,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/7x85ynptg4znjz4t5t7dpx_product_list.jpg",
+                "name":"BOGO Paket Besar 2",
+                "price":76364,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/ib6x7mkiumvlqtrcqiak7c_product_list.jpg",
+                "name":"2 For 39 BBQ Beef Burger",
+                "price":39091,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/zstver3bonhtgja42cyybf_product_list.jpg",
+                "name":"2 For 39 Mozzarella Beef Burger",
+                "price":39091,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/kyehxfp9h5qfu8z3zlgeru_product_list.jpg",
+                "name":"Add 3 Regular Coke",
+                "price":22727,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/hdf9z3qbv9ahjcxdpg6y2a_product_list.jpg",
+                "name":"Add 3 Regular Jasmine Tea",
+                "price":22727,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/pfautp9tikcwwnurxunbzj_product_list.jpg",
+                "name":"Add 3 Rice",
+                "price":15000,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/4/5/ykgx9zjdb7nxxxuz8xfy5n_product_list.jpg",
+                "name":"2 BBQ Beef Rasher Supreme",
+                "price":67273,
+                "size":""
+            }
+        ]
     },
     {
         "name": "Cheese Burger Favorit",
         "image": "./../assets/product/p5.jpg",
-        "slug":"cheese-burger-favorit"
+        "slug":"cheese-burger-favorit",
+        "variant": [
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/5/pm2f9xmdxrhkjewxpxnbvm_product_list.jpg",
+                "name":"King Box Cheeseburger",
+                "price":49545,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/2/27/m3bsdafrjmq8p58ctazbmu_product_list.jpg",
+                "name":"King Box Double Cheeseburger",
+                "price":54546,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/2/27/sa54lp4gjmefvvxvbzmh2y_product_list.jpg",
+                "name":"King Box Mozzarella Cheeseburger ",
+                "price":60000,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/iuc3zuq5keurpuju7crxvb_product_list.jpg",
+                "name":"King Deals Box Cheeseburger Supreme",
+                "price":55000,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/2/27/bkcz7vik5nu7qnosoawufk_product_list.jpg",
+                "name":"King Box Royal Chicken",
+                "price":55000,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/2/27/s8oaja5mhg8r3yxethmslf_product_list.jpg",
+                "name":"Paket Cheeseburger",
+                "price":39545,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/24/uzf3ev7szwbdmnenrm6fsg_product_list.jpg",
+                "name":"Paket Double Cheeseburger",
+                "price":49091,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/q8fcy3iizkbteh7yosahn8_product_list.jpg ",
+                "name":"Paket Mozzarella Cheeseburger",
+                "price":50000,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/uj7fttjncsrkpfnvbevofr_product_list.jpg",
+                "name":"Paket Cheeseburger Supreme",
+                "price":45000,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/24/f28cszes8w3xzbpj7yeynp_product_list.jpg",
+                "name":"Paket Chicken Royal Burger",
+                "price":45000,
+                "size":"regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/dbn7bxtfz8bzkxkrjmfcfw_product_list.jpg",
+                "name":"Double Cheeseburger",
+                "price":35455,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/jckgedzjarrbnzp2z294vc_product_list.jpg",
+                "name":"Mozzarella Cheeseburger",
+                "price":36364,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/n2vqqtmvryxcgp4ihhgtos_product_list.jpg",
+                "name":"Royal Chicken Burger",
+                "price":31364,
+                "size":""
+            }
+        ]
     },
     {
         "name": "Cheese Whopper",
         "image": "./../assets/product/p6.jpg",
-        "slug":"cheese-whopper-2"
+        "slug":"cheese-whopper-2",
+        "variant": [
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/efvy5e7qvogx8dmollf9ck_product_list.jpg",
+                "name":"King Box Whopper",
+                "price":86363,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/efvy5e7qvogx8dmollf9ck_product_list.jpg",
+                "name":"King Box Cheese Whopper®",
+                "price":79545,
+                "size":"medium"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/efvy5e7qvogx8dmollf9ck_product_list.jpg",
+                "name":"King Box Spicy Cheese Whopper",
+                "price":79545,
+                "size":"medium",
+                "isSpicy":true
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/idxvnig5ul5nnuxgggrzuv_product_list.jpg",
+                "name":"King Box Cheese Whopper",
+                "price":59545,
+                "size":"jr reuglar"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/idxvnig5ul5nnuxgggrzuv_product_list.jpg",
+                "name":"King Box Spicy Cheese Whopper",
+                "price":74090,
+                "size":"jr regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/lxfjxsyusxghpgighzqgcl_product_list.jpg",
+                "name":"whopper",
+                "price":69545,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/lxfjxsyusxghpgighzqgcl_product_list.jpg",
+                "name":"Paket Cheese Whopper",
+                "price":85909,
+                "size":"medium"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/lxfjxsyusxghpgighzqgcl_product_list.jpg",
+                "name":"Paket Spicy Cheese Whopper",
+                "price":69545,
+                "size":"medium"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/dbinmgjvx2snjntmuajrwp_product_list.jpg",
+                "name":"Paket Cheese Whopper",
+                "price":49545,
+                "size":"jr regular"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/dbinmgjvx2snjntmuajrwp_product_list.jpg",
+                "name":"Paket Spicy Cheese Whopper",
+                "price":49545,
+                "size":"regular",
+                "isSpicy":true
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/chx9mhhbby4gu2py3udube_product_list.jpg",
+                "name":"Spicy Cheese Whopper",
+                "price":35909,
+                "size":"JR",
+                "isSpicy":true
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/chx9mhhbby4gu2py3udube_product_list.jpg",
+                "name":"Cheese Whopper",
+                "price":54545,
+                "size":""
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/8khq3x6hepkxfcxcnlmn3b_product_list.jpg",
+                "name":"Cheese Whopper",
+                "price":35909,
+                "size":"JR"
+            },
+            {
+                "image":"https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/8khq3x6hepkxfcxcnlmn3b_product_list.jpg",
+                "name":"whopper",
+                "price":54545,
+                "size":""
+            }
+        ]
     },
     {
         "name": "Gold Collection",
         "image": "./../assets/product/p7.jpg",
-        "slug":"gold-collection"
+        "slug":"gold-collection",
+        "variant": [
+            {
+                "image":"",
+                "name":"King Box BBQ Angus Burger",
+                "price":89545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King Box Cheese Lava Angus Burger",
+                "price":94545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Paket BBQ Angus Burger",
+                "price":79545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Paket Cheese Lava Angus Burger",
+                "price":84545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"BBQ Angus Burger",
+                "price":69545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Cheese Lava Angus Burger",
+                "price":69545,
+                "size":""
+            }
+        ]
     },
     {
         "name": "Kids Meal",
         "image": "./../assets/product/p8.jpg",
-        "slug":"kids-meal"
+        "slug":"kids-meal",
+        "variant": [
+            {
+                "image":"",
+                "name":"King JR Cheeseburger",
+                "price":31818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King JR Chicken Burger",
+                "price":31818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King JR Crispy Chicken",
+                "price":31818,
+                "size":""
+            }
+        ]
     },
     {
         "name": "Side & Dessert",
         "image": "./../assets/product/p9.jpg",
-        "slug":"side-dessert"
+        "slug":"side-dessert",
+        "variant": [
+            {
+                "image":"",
+                "name":"King Fusion Nastar Crumble",
+                "price":15000,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Fusion Kitkat",
+                "price":16818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Fusion Cookies N Cream",
+                "price":12727,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Double Chocolate Pie",
+                "price":12727,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"1 Pc Ayam Crispy",
+                "price":18182,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Rice [ Nasi ]",
+                "price":6818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Chessy Fries Medium",
+                "price":20909,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"CHEESY FRIES",
+                "price":12727,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Fries Large",
+                "price":21818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Fries Medium",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Fries Regular",
+                "price":10545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Milo Cookies & Cream",
+                "price":12727,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Milo Dinosaur",
+                "price":12727,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Super Float Coke",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Super Float Fanta",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Super Float Milo",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Super Float Mango",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"SUPER FLOAT MOCCA",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"PROMO FLOAT VANILLA",
+                "price":15000,
+                "size":""
+            }
+        ]
     },
     {
         "name": "BEVERAGES",
         "image": "./../assets/product/p10.jpg",
-        "slug":"beverages"
+        "slug":"beverages",
+        "variant": [
+            {
+                "image":"",
+                "name":"Super Float Coke",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Super Float Fanta",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Super Float Milo",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Super Float Mango",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Coke Large",
+                "price":18182,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Coke Medium",
+                "price":16818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Coke Regular",
+                "price":9545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Fanta Large",
+                "price":18182,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Fanta Medium",
+                "price":16818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Fanta Regular",
+                "price":16818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Sprite Large",
+                "price":9545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Sprite Medium",
+                "price":18182,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Sprite Regular",
+                "price":16818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Lemon Tea Large",
+                "price":9545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Lemon Tea Medium",
+                "price":18182,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Lemon Tea Regular",
+                "price":16818,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Jasmine Tea Large",
+                "price":9545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Jasmine Tea Medium",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Jasmine Tea Regular",
+                "price":9545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"Kopi Gula Aren Original",
+                "price":17273,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"MINERAL WATER",
+                "price":9091,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"1 LITRE COKE",
+                "price":20000,
+                "size":""
+            }
+        ]
     },
     {
         "name": "KING DEALS",
         "image": "./../assets/product/p11.jpg",
-        "slug":"king-deals  "
+        "slug":"king-deals",
+        "variant": [
+            {
+                "image":"",
+                "name":"King Deals Box BBQ Beef Burger",
+                "price":40909,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King Box Jalapeno Cheese Burger",
+                "price":40909,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King Deals Box Beef Burger",
+                "price":40909,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King Deals Box Chicken Burger",
+                "price":40909,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King Deals BBQ Beef Burger",
+                "price":29545,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King Deals Beef Burger Meal",
+                "price":28636,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King Deals Chicken Burger Meal",
+                "price":28636,
+                "size":""
+            },
+            {
+                "image":"",
+                "name":"King Deals Jalapeno Cheese Burger",
+                "price":29545,
+                "size":""
+            }
+        ]
     }
 ]

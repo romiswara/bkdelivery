@@ -2,18 +2,20 @@ import React, { useState } from 'react'
 import CartComponent from './CartComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars ,faXmark} from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 const NavbarComp = () => {
+    const navigate = useNavigate()
     const [showSidebar,setShowSidebar] = useState(true)
     const [menus, setMenus] = useState([
         {
             label: "Delivery",
             menu: "Order",
-            path: "/"
+            path: "/menus"
         },
         {
             label: "Get Fresh",
             menu: "Promotions",
-            path: "/"
+            path: "/news"
         }
     ])
 
@@ -21,14 +23,18 @@ const NavbarComp = () => {
         setShowSidebar(!showSidebar)
     }
 
+    const navigateTo = (path) => {
+        navigate(path);
+    }
+
     return <div className='navbarBK'>
         <div>
-            <img src="./../assets/logo.png" alt="logo" className='logo' />
+            <img src="./../assets/logo.png" alt="logo" className='logo' onClick={() => navigateTo("/")}/>
         </div>
         <div>
             {showSidebar &&   <ul className='list'>
                 {menus.map((menu, index) => {
-                    return <li key={index} className='list-inline'>
+                    return <li key={index} className='list-inline' onClick={() => navigateTo(menu.path)}>
                         <ul>
                             <li className='teks-primary'>{menu.label}</li>
                             <li>{menu.menu}</li>
