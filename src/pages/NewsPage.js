@@ -11,7 +11,7 @@ const NewsPage = () => {
     }
 
     return <Layout>
-        <Container>
+        <Container className='mt-2'>
             <Row>
                 {promotions.map((p, i) => {
                     return <Col md={12} className="mt-3 mb-3">

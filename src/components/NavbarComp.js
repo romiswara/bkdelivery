@@ -3,9 +3,11 @@ import CartComponent from './CartComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars ,faXmark} from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
+import DialogCartComp from './DialogCartComp'
 const NavbarComp = () => {
     const navigate = useNavigate()
     const [showSidebar,setShowSidebar] = useState(true)
+    const [showDialogCart,setShowDialogCart] = useState(false)
     const [menus, setMenus] = useState([
         {
             label: "",
@@ -62,7 +64,8 @@ const NavbarComp = () => {
     }
   },[showSidebar])
 
-    return <div className='navbarBK'>
+    return <>
+    <div className='navbarBK'>
         <div>
             <img src="./../assets/logo.png" alt="logo" className='logo' onClick={() => navigateTo("/")}/>
         </div>
@@ -86,10 +89,12 @@ const NavbarComp = () => {
         <div>
             <CartComponent></CartComponent>
         </div>
-        <div onClick={() => sidebarFunc()}>
+        <div onClick={() => sidebarFunc()} onMouseOver={() => setShowDialogCart(true)} onMouseLeave={() => setShowDialogCart(false)}>
             {showSidebar ? <FontAwesomeIcon icon={faXmark} className='navbarBK__toggle'/> : <FontAwesomeIcon icon={faBars} className='navbarBK__toggle '/>}
         </div>
     </div>
+    {showDialogCart && <DialogCartComp></DialogCartComp>}
+    </>
 }
 
 export default NavbarComp

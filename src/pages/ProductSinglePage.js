@@ -39,7 +39,7 @@ const ProductSinglePage = () => {
     }
 
     return <Layout>
-        <Container>
+        <Container className='mt-5'>
             <Row>
                 <Col md={3} sm={12}>
                     <SearchComp />
@@ -57,7 +57,9 @@ const ProductSinglePage = () => {
                         <div style={{ flex: 1 }}>
                             <h3>Rp. 23,182</h3>
                             <CounterComp></CounterComp>
-                            <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />
+                           <div className='mt-4'>
+                           <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />
+                           </div>
                         </div>
                     </div>
                 </Col>

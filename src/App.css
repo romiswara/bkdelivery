@@ -4,6 +4,9 @@
   --light: #FFFFFF;
   --font: #919191;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @font-face {
   font-family: "FlameRegular";
@@ -214,6 +217,31 @@ body {
 .search__button {
   background-color: var(--primary) !important;
   color: var(--light) !important;
+}
+.qty-wrapper {
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  background: #fff;
+  height: 40px;
+  overflow: hidden;
+}
+.qty-wrapper div:nth-child(1){
+  width: 5%;
+  cursor: pointer;
+  padding-top: 5px;
+}
+.qty-wrapper div:nth-child(2){
+  width: 90%;
+}
+.qty-wrapper input {
+  width: 100% !important;
+}
+.qty-wrapper div:nth-child(3){
+  width: 5%;
+  padding-top: 5px;
+  cursor: pointer;
 }
 .footer {
   background-color: var(--dark);
