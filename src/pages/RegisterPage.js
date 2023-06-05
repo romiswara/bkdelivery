@@ -1,17 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../Layout'
 import { Col, Container, Row } from 'react-bootstrap'
 import InputComp from '../components/global/InputComp'
 import ButtonComp from '../components/global/ButtonComp'
 import { useNavigate } from "react-router-dom";
+import RadioComp from '../components/global/RadioComp'
+import DateComp from '../components/global/DateComp'
 
 
 const RegisterPage = () => {
     const navigate = useNavigate()
     const [data, setData] = useState({
+        fullname: "",
+        email: "",
+        dateofbirth: "",
+        gender: "",
         phone: "",
         password: ""
     })
+
+
     const changeData = (key, value) => {
         setData(prev => {
             return {
@@ -25,9 +33,11 @@ const RegisterPage = () => {
         alert("submit")
     }
 
-    const navigateRegister = () => {
-        navigate("/accounts/register");
-    }
+    useEffect(() => {
+        console.log("data", data)
+    }, [data])
+
+
     return <Layout>
         <Container>
             <Row>
@@ -41,9 +51,40 @@ const RegisterPage = () => {
                             <h6 className="card-subtitle mb-2 text-muted text-center">Please enter your mobile number to register</h6>
                             <InputComp
                                 type="text"
+                                placeholder="Full Name"
+                                onchangeValue={(value) => changeData("fullname", value)}>
+                            </InputComp>
+                            <InputComp
+                                type="text"
+                                placeholder="Email"
+                                onchangeValue={(value) => changeData("email", value)}>
+                            </InputComp>
+                            <InputComp
+                                type="text"
                                 groupText="+62"
                                 placeholder="8680123456 (example)"
                                 onchangeValue={(value) => changeData("phone", value)}>
+                            </InputComp>
+                            <DateComp onChangeValue={(val) => changeData("dateofbirth", val)} />
+                            <ul className='list-inline'>
+                                <li className='list-inline'>
+                                    <RadioComp
+                                        label="Male"
+                                        onchangeValue={(value) => changeData("gender", "male")}
+                                    />
+                                </li>
+                                <li className='list-inline'>
+                                    <RadioComp
+                                        label="Female"
+                                        onchangeValue={(value) => changeData("gender", "female")}
+                                    />
+                                </li>
+
+                            </ul>
+                            <InputComp
+                                type="password"
+                                placeholder="Password"
+                                onchangeValue={(value) => changeData("password", value)}>
                             </InputComp>
 
                             <ButtonComp text="Register"
@@ -51,9 +92,9 @@ const RegisterPage = () => {
                                 className="button-primary"
                                 onClickCB={submitFunc}
                             />
-                           <div className='text-center'>
-                           <img src="./../assets/bg.jpg" />
-                           </div>
+                            <div className='text-center'>
+                                <img src="./../assets/bg.jpg" />
+                            </div>
                         </div>
                     </div>
                 </Col>

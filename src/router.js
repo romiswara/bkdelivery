@@ -9,6 +9,7 @@ import ProductsPage from "./pages/ProductsPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TosPage from "./pages/TosPage";
+import NewsDetailPage from "./pages/NewsDetailPage";
 
 const router = createBrowserRouter([
     {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/news/:slug",
-        element: <NewsPage />,
+        element: <NewsDetailPage />,
         // errorElement: <ErrorPage />,
     },
     {

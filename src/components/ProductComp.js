@@ -1,11 +1,13 @@
 import React from 'react'
 import { Button, Row, Col } from 'react-bootstrap'
 import ButtonComp from './global/ButtonComp'
+import { useNavigate } from 'react-router-dom'
 
 const ProductComp = ({ data }) => {
-
-    const onClickFunc = () => {
-        alert("err")
+    const navigate = useNavigate();
+    const onClickFunc = (path) => {
+      
+        navigate(`/menus/${path}`)
     }
     return <div className='menu-box'>
         <div>
@@ -17,7 +19,7 @@ const ProductComp = ({ data }) => {
                 {data.price != undefined && <h5 style={{ textAlign: 'left' }}>{data.price}</h5>}
             </Col>
             <Col md={6}>
-                <ButtonComp className="button-primary" text="Order" onClickCB={() => onClickFunc()}></ButtonComp>
+                <ButtonComp className="button-primary" text="Order" onClickCB={() => onClickFunc(data.slug)}></ButtonComp>
             </Col>
         </Row>
     </div>

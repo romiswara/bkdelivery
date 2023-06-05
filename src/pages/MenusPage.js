@@ -8,7 +8,7 @@ import { useParams , useNavigate} from 'react-router-dom'
 import ProductComp from '../components/ProductComp'
 const MenusPage = () => {
     const navigate = useNavigate();
-    const { slug } = useParams();
+    let { slug } = useParams();
     const [listProduct, setListProduct] = useState([])
     const findProduct = (slug) => {
         let selectedProduct = product.find(p => {
@@ -16,17 +16,17 @@ const MenusPage = () => {
         })
         if (selectedProduct.variant) {
             setListProduct(selectedProduct.variant)
-            console.log("selectedProduct", selectedProduct)
         }
     }
 
     useEffect(() => {
-        console.log("slug", slug)
+       if(!slug){
+            slug ="kings-chicken-rasa-baru"
+       }
         findProduct(slug)
     }, [slug])
 
     const navigateMenuFunc = (data) => {
-        console.log("data",data)
         setListProduct([])
         navigate(`/menus/${data.slug}`);
     }
@@ -40,15 +40,12 @@ const MenusPage = () => {
                     {product.map((data, index) => {
                         return <MenuComp key={index} data={data} clickMenuCB={navigateMenuFunc} />
                     })}
-
                     <small>* Harga belum termasuk pajak</small>
                 </Col>
                 <Col md={10} sm={12}>
                     {listProduct.map((product, index) => {
                         return <ProductComp data={product}></ProductComp>
                     })}
-
-
                 </Col>
             </Row>
         </Container>

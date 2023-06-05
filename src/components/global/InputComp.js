@@ -8,7 +8,7 @@ const InputComp = ({ label, type, onchangeValue, groupText, placeholder }) => {
         <div className="col-auto" style={{ textAlign: 'left' }}>
             {label != undefined && <label className="sr-only" for="inlineFormInputGroup">{label}</label>}
             <div className="input-group mb-2">
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-1">
                     {groupText != undefined && <InputGroup.Text id="basic-addon1">{groupText}</InputGroup.Text>}
                     <Form.Control
                         type={type}

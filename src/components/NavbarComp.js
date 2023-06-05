@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useLayoutEffect, useEffect} from 'react'
 import CartComponent from './CartComponent'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars ,faXmark} from '@fortawesome/free-solid-svg-icons'
@@ -7,6 +7,11 @@ const NavbarComp = () => {
     const navigate = useNavigate()
     const [showSidebar,setShowSidebar] = useState(true)
     const [menus, setMenus] = useState([
+        {
+            label: "",
+            menu: "Home",
+            path: "/"
+        },
         {
             label: "Delivery",
             menu: "Order",
@@ -27,6 +32,36 @@ const NavbarComp = () => {
         navigate(path);
     }
 
+    useLayoutEffect(() => {
+        setShowSidebar(true)
+    },[])
+
+
+  useEffect(() => {
+    let appClass = document.getElementsByClassName("App")
+    let navbarBKClass = document.getElementsByClassName("navbarBK")
+    if(showSidebar && window.innerWidth<1024){
+        if(appClass){
+            appClass[0].style.maxHeight="100vh"
+            appClass[0].style.overflow="hidden"         
+        }
+        let query = document.querySelector('#root > div > div.navbarBK > div:nth-child(2)')
+        if(query){
+            query.style.height="100vh"
+        }
+    } else {
+        if(appClass){
+            appClass[0].style.maxHeight="auto"
+            appClass[0].style.overflow="auto"
+        }
+        let query = document.querySelector('#root > div > div.navbarBK > div:nth-child(2)')
+        if(query){
+            query.style.height="auto"
+            query.style.background="#2D2D2D"
+        }
+    }
+  },[showSidebar])
+
     return <div className='navbarBK'>
         <div>
             <img src="./../assets/logo.png" alt="logo" className='logo' onClick={() => navigateTo("/")}/>
@@ -45,7 +80,7 @@ const NavbarComp = () => {
           
         </div>
         <div>
-            {showSidebar &&    <a>Login</a> }
+            {showSidebar &&    <div onClick={() => navigateTo('/accounts/login')}>Login</div> }
          
         </div>
         <div>
