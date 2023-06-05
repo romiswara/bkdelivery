@@ -6,11 +6,19 @@ import MenusPage from "./pages/MenusPage";
 import NewsPage from "./pages/NewsPage";
 import CartPage from "./pages/CartPage";
 import ProductsPage from "./pages/ProductsPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TosPage from "./pages/TosPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <HomePage />,
+        // errorElement: <ErrorPage />,
+    },
+    {
+        path: "/menus",
+        element: <MenusPage />,
         // errorElement: <ErrorPage />,
     },
     {
@@ -21,6 +29,26 @@ const router = createBrowserRouter([
     {
         path: "/news",
         element: <NewsPage />,
+        // errorElement: <ErrorPage />,
+    },
+    {
+        path: "/news/:slug",
+        element: <NewsPage />,
+        // errorElement: <ErrorPage />,
+    },
+    {
+        path: "/about-us",
+        element: <AboutUsPage />,
+        // errorElement: <ErrorPage />,
+    },
+    {
+        path: "/privacy-policy",
+        element: <PrivacyPage />,
+        // errorElement: <ErrorPage />,
+    },
+    {
+        path: "/terms-and-conditions",
+        element: <TosPage />,
         // errorElement: <ErrorPage />,
     },
     {
