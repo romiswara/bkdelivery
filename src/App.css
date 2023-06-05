@@ -19,8 +19,12 @@
     url("./fonts/FlameBold.otf") format("truetype");
 }
 
+.teks-primary {
+  color: var(--primary) !important;
+}
+
 .body {
-  /* background-image: url('./assets/BK_bg.jpg'); */
+  background-image: url('./assets/BK_bg.jpg');
   background-size: cover;
 }
 
@@ -41,14 +45,18 @@
   margin-right: 35px;
   width: 90px;
   height: 90px;
-  margin-top: 0px;
+  margin-top: -8px;
 }
+
 .button-primary {
   background: var(--primary) !important;
   border: solid 1px var(--primary) !important;
   color: var(--light) !important;
-} 
-.navbar {
+}
+
+.navbarBK {
+  display: flex;
+  justify-content: center;
   background-color: #2d2d2d;
   width: 100%;
   height: 76px;
@@ -56,6 +64,107 @@
   position: relative;
   box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 50%);
   color: #fff;
+  padding: 0px 16%;
+  margin: 0px;
+  font-family: "FlameRegular";
+}
+
+.navbarBK .list-inline {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.navbarBK ul li ul li:first-child {
+  font-size: 14px;
+  list-style: none;
+}
+
+.navbarBK ul li ul li:nth-child(2) {
+  font-size: 24px;
+  list-style: none;
+  font-weight: bold;
+}
+
+.navbarBK div:nth-child(1) {
+  width: 90px;
+}
+
+.navbarBK div:nth-child(2) {
+  width: 80%;
+  margin-top: -3px;
+  margin-left: 30px;
+}
+
+.navbarBK div:nth-child(3) {
+  width: 100px;
+  margin-top: -3px;
+  margin-left: 30px;
+}
+
+.navbarBK div:nth-child(3) a {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.navbarBK div:last-child {
+  width: 80px;
+  margin: 0px;
+}
+
+
+.navbarBK div:nth-child(4) {
+  width: 60px;
+  margin: 0px;
+  background-color: var(--primary);
+  text-align: center;
+}
+.navbarBK div:nth-child(5) {
+  position: absolute;
+  left: 20px;
+  color: var(--primary);
+  display: none;
+}
+
+.navbarBK ul {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.navbarBK>* {
+  padding: 15px 0;
+}
+
+.navbarBK__toggle {
+  font-size: 30px;
+  cursor: pointer;
+}
+.cart {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.cart__wrapper {
+  position: relative;
+}
+
+.cart__icon {
+  font-size: 30px;
+  margin-left: -15px;
+  margin-top: 4px;
+}
+
+.cart__notif {
+  position: absolute;
+  background-color: red;
+  width: 22px !important;
+  height: 22px;
+  border-radius: 100px;
+  top: -6px;
+  right: 20px;
+  padding-bottom: 4px;
 }
 
 .menu-box {
@@ -69,8 +178,19 @@
   box-sizing: border-box;
   box-shadow: 2px 2px 15px -4px #6b6b6b;
 }
-.footer {
 
+.bodybg {
+  background-image: url('./assets/BK_bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  padding-top: 85px;
+}
+
+.footer {
+  z-index: 4;
   background-color: var(--dark);
   color: var(--light);
   font-family: 'FlameRegular';
@@ -81,4 +201,88 @@
   margin-right: 10px;
   cursor: pointer;
   color: var(--font);
+}
+
+
+.content-block {
+  width: 100%;
+  height: 100%;
+  padding: 100px 0px 150px;
+  margin: 50px 0px 0px;
+  display: table;
+  background-color: #f9f4f2;
+  position: relative;
+  top: -120px;
+}
+
+
+
+/* media queries */
+
+
+@media screen and (max-width:1024px) {
+  .logo {
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    left: 45%;
+    top: 13px;
+  }
+
+  .navbarBK {
+    position: relative;
+    height: 50px;
+  }
+
+  .navbarBK>* {
+    padding: 7px 0;
+  }
+  .navbarBK div:nth-child(2)::before{
+    height: 100vh;
+  }
+
+  .navbarBK div:nth-child(2) {
+    width: 100%;
+    position: absolute;
+    left: -30px;
+    top: 50px;
+    background-color: #000;
+    padding-left: 30px;
+    /* height: 100vh; */
+  }
+
+  .navbarBK .list-inline {
+    display: block;
+  }
+
+  .navbarBK div:nth-child(3) {
+    position: absolute;
+    left: -30px;
+    padding-left: 30px;
+    top: 240px;
+    background-color: #000;
+  }
+
+  .navbarBK div:nth-child(4) {
+    position: absolute;
+    right: 0;
+    height: 100%;
+  }
+  .navbarBK div:nth-child(5) {
+    display: block;
+  }
+  .cart__wrapper {
+    width: 100%;
+    position: relative;
+    background: green;
+  }
+
+  .cart__notif {
+    
+    position: absolute;
+    margin-left: 60px !important;
+    margin-top: -50px !important;
+    text-align: center;
+  }
+
 }

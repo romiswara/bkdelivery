@@ -1,47 +1,53 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-
+import React, { useState } from 'react'
+import CartComponent from './CartComponent'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars ,faXmark} from '@fortawesome/free-solid-svg-icons'
 const NavbarComp = () => {
-    return <div className='navbar'>
-        <Container>
-            <Row>
-                <div style={{ display: 'flex' }}>
-                    <div style={{ width: '90px' }}>
-                        <img src="./../assets/logo.png" alt="logo" className='logo' />
-                    </div>
-                    <div style={{ flex: 1 }}>
-                        <ul className='list'>
-                            <li className='list-inline'>
-                                <ul>
-                                    <li style={{ fontSize: '14px', listStyle: 'none' }}>Delivery</li>
-                                    <li style={{ fontSize: '24px', listStyle: 'none', fontWeight: 'bold' }}>Order</li>
-                                </ul>
-                            </li>
-                            <li className='list-inline'>
-                                <ul>
-                                    <li style={{ fontSize: '14px', listStyle: 'none' }}>Get Fresh</li>
-                                    <li style={{ fontSize: '24px', listStyle: 'none', fontWeight: 'bold' }}>Promotions</li>
-                                </ul>
-                            </li>
+    const [showSidebar,setShowSidebar] = useState(true)
+    const [menus, setMenus] = useState([
+        {
+            label: "Delivery",
+            menu: "Order",
+            path: "/"
+        },
+        {
+            label: "Get Fresh",
+            menu: "Promotions",
+            path: "/"
+        }
+    ])
 
-                        </ul>
-                    </div>
-                    <div style={{ width: '200px' }}>
-                        <ul className='list'>
-                            <li className='list-inline'>
-                                <ul>
-                                    <li style={{ fontSize: '24px', listStyle: 'none', fontWeight: 'bold' ,marginRight:'40px'}}>Login</li>
-                                </ul>
-                            </li>
-                            <li className='list-inline'>
-                                cart
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    const sidebarFunc = () => {
+        setShowSidebar(!showSidebar)
+    }
 
-            </Row>
-        </Container>
+    return <div className='navbarBK'>
+        <div>
+            <img src="./../assets/logo.png" alt="logo" className='logo' />
+        </div>
+        <div>
+            {showSidebar &&   <ul className='list'>
+                {menus.map((menu, index) => {
+                    return <li key={index} className='list-inline'>
+                        <ul>
+                            <li className='teks-primary'>{menu.label}</li>
+                            <li>{menu.menu}</li>
+                        </ul>
+                    </li>
+                })}
+            </ul>}
+          
+        </div>
+        <div>
+            {showSidebar &&    <a>Login</a> }
+         
+        </div>
+        <div>
+            <CartComponent></CartComponent>
+        </div>
+        <div onClick={() => sidebarFunc()}>
+            {showSidebar ? <FontAwesomeIcon icon={faXmark} className='navbarBK__toggle'/> : <FontAwesomeIcon icon={faBars} className='navbarBK__toggle '/>}
+        </div>
     </div>
 }
 

@@ -1,37 +1,33 @@
 import React, { useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
 import './App.css';
-import CarouselComp from './components/CarouselComp';
-import FooterComp from './components/FooterComp';
-import NavbarComp from './components/NavbarComp';
-import ProductComp from './components/ProductComp';
-import product from './data/product.json'
-function App() {
-  console.log("product", product)
-  const [productList, setProductList] = useState(product)
+import { RouterProvider, useRouteError, createBrowserRouter } from "react-router-dom";
+import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage';
+import Layout from './Layout';
+import RegisterPage from './pages/RegisterPage';
+function App({children}) {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomePage />,
+      // errorElement: <ErrorPage />,
+    },
+    {
+      path: "/accounts/login",
+      element: <LoginPage />,
+      // errorElement: <ErrorPage />,
+    },
+    {
+      path: "/accounts/register",
+      element: <RegisterPage />,
+      // errorElement: <ErrorPage />,
+    },
+  ]);
   return (
     <div className="App">
-      <div className='body'>
-
-        <NavbarComp></NavbarComp>
-        <CarouselComp></CarouselComp>
-        <Container>
-          <Row>
-            <Col md={12}>
-              <h3 className='text-center'>Our Menus</h3>
-            </Col>
-          </Row>
-          <Row>
-           
-              {productList.map(p => {
-                return  <Col md={4}><ProductComp data={p}></ProductComp> </Col>
-              })}
-
-           
-          </Row>
-        </Container>
-        <FooterComp></FooterComp>
-      </div>
+      <RouterProvider router={router} />
+    
     </div>
   );
 }
