@@ -13,14 +13,14 @@ html {
   font-family: "FlameRegular";
   /*Can be any text*/
   src: local("FlameRegular"),
-    url("./fonts/FlameRegular.otf") format("truetype");
+    url("./fonts/Flame-Regular.woff") format("truetype");
 }
 
 @font-face {
   font-family: "FlameBold";
   /*Can be any text*/
   src: local("FlameBold"),
-    url("./fonts/FlameBold.otf") format("truetype");
+    url("./fonts/Flame-Bold.woff") format("truetype");
 }
 
 .container {
