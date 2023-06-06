@@ -1,14 +1,16 @@
 :root {
   --dark: #2D2D2D;
   --primary: #ED7802;
-  --secondary:#FAAF18;
+  --secondary: #FAAF18;
   --light: #FFFFFF;
   --font: #919191;
-  --titleColor:#8B542F;
+  --titleColor: #8B542F;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 p {
@@ -56,26 +58,31 @@ body {
   font-family: FlameBold;
   font-size: 32px;
 }
+
 .title-reg {
   color: var(--titleColor);
   font-family: FlameRegular;
   font-size: 32px;
 }
+
 .nopaddingbottom {
   margin: 0px;
   padding-bottom: 0px;
 }
+
 .regularfont {
-   font-family: FlameRegular;
+  font-family: FlameRegular;
 }
 
 .bgwrapper {
   background: url('https://bkdelivery.co.id/static/website/img/BK_bg.jpg?5218847fa211') no-repeat center center fixed;
-    background-size: cover;
+  background-size: cover;
 }
+
 .forget {
   color: #ED7802 !important;
 }
+
 .container {
   font-family: FlameRegular;
 }
@@ -102,12 +109,14 @@ body {
   border: solid 1px var(--primary) !important;
   color: var(--light) !important;
 }
+
 .button-secondary {
-  
+
   background: var(--secondary) !important;
   border: solid 1px var(--secondary) !important;
   color: var(--light) !important;
 }
+
 .navbarBK {
   display: flex;
   justify-content: center;
@@ -225,6 +234,7 @@ body {
   right: 20px;
   padding-bottom: 4px;
 }
+
 .cart__notif small {
   font-size: 16px;
 }
@@ -245,10 +255,12 @@ body {
   box-shadow: 2px 2px 15px -4px #6b6b6b;
   height: 360px;
 }
+
 .menu-box h5 {
   color: #8B542F;
   font-family: FlameBold;
 }
+
 .bodybg {
   background-image: url('./assets/BK_bg.jpg');
   background-size: cover;
@@ -263,6 +275,7 @@ body {
   background-color: var(--primary) !important;
   color: var(--light) !important;
 }
+
 .qty-wrapper {
   border-radius: 5px;
   box-sizing: border-box;
@@ -272,22 +285,27 @@ body {
   height: 40px;
   overflow: hidden;
 }
-.qty-wrapper div:nth-child(1){
+
+.qty-wrapper div:nth-child(1) {
   width: 5%;
   cursor: pointer;
   padding-top: 5px;
 }
-.qty-wrapper div:nth-child(2){
+
+.qty-wrapper div:nth-child(2) {
   width: 90%;
 }
+
 .qty-wrapper input {
   width: 100% !important;
 }
-.qty-wrapper div:nth-child(3){
+
+.qty-wrapper div:nth-child(3) {
   width: 5%;
   padding-top: 5px;
   cursor: pointer;
 }
+
 .footer {
   background-color: var(--dark);
   color: var(--light);
@@ -381,7 +399,7 @@ body {
     padding-left: 4% !important;
     padding-right: 4% !important;
   }
-  
+
   .hidedesktop {
     display: block !important;
   }
@@ -457,6 +475,7 @@ body {
     text-align: center;
     overflow: hidden;
   }
+
   .cart__notif small {
     margin-left: -30px;
     font-size: 16px;
