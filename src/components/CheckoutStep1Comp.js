@@ -6,8 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import ButtonComp from './global/ButtonComp'
 import { deleteCart, updateCart } from '../redux/actions/cartAction'
+import { useNavigate } from 'react-router-dom'
 
 const CheckoutStep1Comp = () => {
+    const navigation = useNavigate()
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
     const totalCB = (total, variants) => {
@@ -19,7 +21,7 @@ const CheckoutStep1Comp = () => {
     }
 
     const navigateToLoginFunc = () => {
-
+        navigation('/accounts/login')
     }
 
     const continueAsGuestFunc = () => {

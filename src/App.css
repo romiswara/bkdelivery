@@ -1,6 +1,7 @@
 :root {
   --dark: #2D2D2D;
   --primary: #ED7802;
+  --secondary:#FAAF18;
   --light: #FFFFFF;
   --font: #919191;
   --titleColor:#8B542F;
@@ -8,7 +9,11 @@
 html {
   scroll-behavior: smooth;
 }
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
+p {
+  font-family: 'Barlow', sans-serif;
+}
 @font-face {
   font-family: "FlameRegular";
   /*Can be any text*/
@@ -50,6 +55,15 @@ body {
   font-family: FlameBold;
   font-size: 32px;
 }
+.title-reg {
+  color: var(--titleColor);
+  font-family: FlameRegular;
+  font-size: 32px;
+}
+
+.forget {
+  color: #ED7802 !important;
+}
 .container {
   font-family: FlameRegular;
 }
@@ -76,7 +90,12 @@ body {
   border: solid 1px var(--primary) !important;
   color: var(--light) !important;
 }
-
+.button-secondary {
+  
+  background: var(--secondary) !important;
+  border: solid 1px var(--secondary) !important;
+  color: var(--light) !important;
+}
 .navbarBK {
   display: flex;
   justify-content: center;
@@ -194,6 +213,10 @@ body {
   right: 20px;
   padding-bottom: 4px;
 }
+.loginbox {
+  padding: 20px !important;
+  border-radius: 10px !important;
+}
 
 .menu-box {
   float: left;
@@ -290,6 +313,7 @@ body {
   padding: 0px;
   margin: 0px;
   margin-bottom: 15px;
+  font-family: 'Barlow', sans-serif;
 }
 
 .footer__link div:nth-child(1) {

@@ -114,6 +114,7 @@ const ProductSinglePage = () => {
                     <small>* Harga belum termasuk pajak</small>
                 </Col>
                 <Col md={9} sm={12}>
+                    <div className='card' style={{padding:'20px'}}>
                     <div style={{ display: 'flex' }}>
                         <div style={{ flex: 1 }}>
                             <h2>{selectedVariant.name}</h2>
@@ -126,6 +127,7 @@ const ProductSinglePage = () => {
                                 <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />
                             </div>
                         </div>
+                    </div>
                     </div>
                 </Col>
             </Row>

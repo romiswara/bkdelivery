@@ -76,9 +76,9 @@ const LoginPage = () => {
                     span: 6,
                     offset: 3
                 }} >
-                    <div className="card" >
+                    <div className="card loginbox" >
                         <div className="card-body">
-                            <h5 className="text-center title">Welcome!</h5>
+                            <h5 className="text-center title mt-3">Welcome!</h5>
                             <p className="card-subtitle mb-5 mt-3 text-center">Enter your mobile number and password to login</p>
                             <InputComp
                                 type="text"
@@ -96,15 +96,15 @@ const LoginPage = () => {
                                 className="button-primary"
                                 onClickCB={submitFunc}
                             />
-                            <p className='text-primary' style={{cursor:'pointer'}}>Forget Password?</p>
+                            <p className='teks-primary mt-3 forget' style={{cursor:'pointer'}}>Forget Password?</p>
                             <div>
-                                <h5 className='title'>Not A Member Yet?</h5>
+                                <h5 className='title-reg'>Not A Member Yet?</h5>
                                 <Row>
                                     <Col md={8}>
                                         <p>Register to get reward points and exclusive promotions.</p>
                                     </Col>
                                     <Col md={4}>
-                                        <ButtonComp text="Register" className="button-primary"
+                                        <ButtonComp text="Register" className="button-secondary"
                                             onClickCB={navigateRegister} width="100%" />
                                     </Col>
                                 </Row>
