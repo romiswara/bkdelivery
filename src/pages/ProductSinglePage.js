@@ -121,12 +121,12 @@ const ProductSinglePage = () => {
                 <Col md={9} sm={12}>
                     <div className='card' style={{ padding: '20px' }}>
                         <Row>
-                            <Col md={6} sm={12} xs={12}>
-                                <h2>{selectedVariant.name}</h2>
+                            <Col md={8} sm={12} xs={12}>
+                                <h2 className='title-reg'>{selectedVariant.name}</h2>
                                 <img src={selectedVariant.image} className='img-fluid mb-3' />
                             </Col>
-                            <Col md={6} sm={12} xs={12}>
-                                <h3>{selectedVariant.price}</h3>
+                            <Col md={4} sm={12} xs={12}>
+                                <h3 className='regularfont'>{selectedVariant.price}</h3>
                                 <CounterComp value={qty} totalCB={changeTotal}></CounterComp>
                                 <div className='mt-4'>
                                     <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />

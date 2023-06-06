@@ -69,6 +69,10 @@ body {
    font-family: FlameRegular;
 }
 
+.bgwrapper {
+  background: url('https://bkdelivery.co.id/static/website/img/BK_bg.jpg?5218847fa211') no-repeat center center fixed;
+    background-size: cover;
+}
 .forget {
   color: #ED7802 !important;
 }
