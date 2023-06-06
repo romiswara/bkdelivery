@@ -8,23 +8,37 @@ import { useParams, useNavigate } from 'react-router-dom'
 import ProductComp from '../components/ProductComp'
 import ButtonComp from '../components/global/ButtonComp'
 import CounterComp from '../components/CounterComp'
+import { useDispatch } from 'react-redux'
+import { addCart } from '../redux/actions/cartAction'
 const ProductSinglePage = () => {
+    const dispatch = useDispatch()
     const navigate = useNavigate();
     let { slug } = useParams();
+    const [qty,setQty] = useState(1)
     const [listProduct, setListProduct] = useState([])
+    const [selectedVariant,setSelectedVariant] = useState({})
     const findProduct = (slug) => {
         let selectedProduct = product.find(p => {
-            return p.slug == slug
+            if(p.variant){
+                return p.variant.find((variant,index) => {
+                    var slugReplace = slug.replace(/-/g, ' ');
+                    if(variant.name == slugReplace){
+                        return variant
+                    }
+                     
+                })
+            }
         })
-        if (selectedProduct.variant) {
-            setListProduct(selectedProduct.variant)
-        }
+        let selectedV = selectedProduct.variant.find(v => {
+            var slugReplace = slug.replace(/-/g, ' ');
+            return v.name == slugReplace
+        })
+        setSelectedVariant(selectedV)
+      
     }
 
     useEffect(() => {
-        if (!slug) {
-            slug = "kings-chicken-rasa-baru"
-        }
+      
         findProduct(slug)
     }, [slug])
 
@@ -35,7 +49,17 @@ const ProductSinglePage = () => {
 
 
     const addToCartFunc = () => {
-        alert("add")
+        console.log("selectedVariant",selectedVariant)
+        dispatch(addCart({
+            name:selectedVariant.name,
+            price:selectedVariant.price,
+            image:selectedVariant.image,
+            qty:qty
+        }))
+    }
+
+    const changeTotal = (value) => {
+        setQty(value)
     }
 
     return <Layout>
@@ -51,12 +75,12 @@ const ProductSinglePage = () => {
                 <Col md={9} sm={12}>
                     <div style={{ display: 'flex' }}>
                         <div style={{ flex: 1 }}>
-                            <h2>App Exc BBQ Beef Rasher</h2>
-                            <img src="https://media-order.bkdelivery.co.id/thumb/product_photo/2023/3/20/9xl3ak2puc6xgzx3teshaa_product_details.jpg" className='img-fluid' />
+                            <h2>{selectedVariant.name}</h2>
+                            <img src={selectedVariant.image} className='img-fluid' />
                         </div>
                         <div style={{ flex: 1 }}>
-                            <h3>Rp. 23,182</h3>
-                            <CounterComp></CounterComp>
+                            <h3>{selectedVariant.price}</h3>
+                            <CounterComp totalCB={changeTotal}></CounterComp>
                            <div className='mt-4'>
                            <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />
                            </div>

@@ -1,15 +1,10 @@
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
-import InputComp from './global/InputComp'
+import React, { useEffect, useState } from 'react'
 import { Form } from 'react-bootstrap';
-const CounterComp = ({ value }) => {
+const CounterComp = ({ totalCB}) => {
+
     const [total, setTotal] = useState(1)
-
-    const changeQtyFunc = (val) => {
-
-    }
-
     const decrementFunc = () => {
         if(total<1){
             setTotal(parseInt(total) - 1)
@@ -23,6 +18,10 @@ const CounterComp = ({ value }) => {
     const onchangeValue = (val) => {
         setTotal(val)
     }
+
+    useEffect(() => {
+        totalCB(total)
+    },[total])
 
     return <div className='qty-wrapper'>
         <div onClick={decrementFunc} style={{ width: '30px', textAlign: 'center' }}>

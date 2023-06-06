@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars ,faXmark} from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
 import DialogCartComp from './DialogCartComp'
+import { useSelector } from 'react-redux'
 const NavbarComp = () => {
+    const cart = useSelector(state => state.cart)
     const navigate = useNavigate()
     const [showSidebar,setShowSidebar] = useState(true)
     const [showDialogCart,setShowDialogCart] = useState(false)
@@ -93,7 +95,7 @@ const NavbarComp = () => {
             {showSidebar ? <FontAwesomeIcon icon={faXmark} className='navbarBK__toggle'/> : <FontAwesomeIcon icon={faBars} className='navbarBK__toggle '/>}
         </div>
     </div>
-    {showDialogCart && <DialogCartComp></DialogCartComp>}
+    {showDialogCart && <DialogCartComp cart={cart}></DialogCartComp>}
     </>
 }
 

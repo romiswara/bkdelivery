@@ -1,49 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import ButtonComp from './global/ButtonComp'
+import { useNavigate } from 'react-router-dom'
 
-const DialogCartComp = () => {
-
+const DialogCartComp = ({ cart }) => {
+    const navigate = useNavigate()
+    const [subtotal,setSubTotal] = useState(0)
     const navigateToCart = () => {
-        alert("sdfsdf")
+        navigate('/cart')
+    }
+    const countTotalPrice = () => {
+        let tempSubtotal = 0
+        if(cart){
+            for(let a=0;a<cart.length;a++){
+                tempSubtotal = tempSubtotal+ (parseInt(cart[a].qty)*(parseInt(cart[a].price)))
+            }
+            setSubTotal(tempSubtotal)
+        }
     }
 
-    return <div style={{ width: '540px',position:'absolute',zIndex:3,background:'#fff',padding:'20px',borderRadius:'10px',top:"70px",right:0 }}>
-        {/* https://bkdelivery.co.id/static/website/img/BK_loading_2.e37135cc9952.gif */}
-        <Row>
-            <Col md={2}>
-                <image src="" className='img-fluid'/>
-            </Col>
-            <Col md={6}>
-               <p>sdfjkasjdfk sadkfjksadfj ksdfa jk</p>
-            </Col>
-            <Col md={1}>
-                x 1
-            </Col>
-            <Col md={3}>
-                12088
-            </Col>
-        </Row>
-        <Row>
-            <Col md={2}>
-                <image src="" className='img-fluid'/>
-            </Col>
-            <Col md={6}>
-               <p>sdfjkasjdfk sadkfjksadfj ksdfa jk</p>
-            </Col>
-            <Col md={1}>
-                x 1
-            </Col>
-            <Col md={3}>
-                12088
-            </Col>
-        </Row>
+    useEffect(() => {
+        countTotalPrice()
+    },[cart])
+    return <div style={{ width: '540px', position: 'absolute', zIndex: 3, background: '#fff', padding: '20px', borderRadius: '10px', top: "70px", right: 0 }}>
+        {cart && cart.map((c, index) => {
+            return <Row key={index}>
+                <Col md={2}>
+                    <image src={c.image} className='img-fluid' />
+                </Col>
+                <Col md={6}>
+                    <p>{c.name}</p>
+                </Col>
+                <Col md={1}>
+                    {c.qty}
+                </Col>
+                <Col md={3}>
+                    {c.price}
+                </Col>
+            </Row>
+        })}
         <Row>
             <Col md={6}>
                 <h5>SUBTOTAL</h5>
             </Col>
             <Col md={6}>
-                <h5>150000</h5>
+                <h5>{subtotal}</h5>
             </Col>
         </Row>
         <Row>

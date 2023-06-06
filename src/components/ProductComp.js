@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom'
 
 const ProductComp = ({ data }) => {
     const navigate = useNavigate();
-    const onClickFunc = (path) => {
-      
-        navigate(`/products/${path}`)
+    const onClickFunc = (name) => {
+        var slug = name.replace(/ /g, '-');
+        navigate(`/products/${slug}`)
     }
     return <div className='menu-box'>
         <div className='mb-3'>
@@ -19,7 +19,7 @@ const ProductComp = ({ data }) => {
                 {data.price != undefined && <h5 style={{ textAlign: 'left' }}>{data.price}</h5>}
             </Col>
             <Col md={6}>
-                <ButtonComp width="100%" className="button-primary" text="Order" onClickCB={() => onClickFunc(data.slug)}></ButtonComp>
+                <ButtonComp width="100%" className="button-primary" text="Order" onClickCB={() => onClickFunc(data.name)}></ButtonComp>
             </Col>
         </Row>
     </div>
