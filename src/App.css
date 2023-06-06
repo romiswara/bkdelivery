@@ -3,6 +3,7 @@
   --primary: #ED7802;
   --light: #FFFFFF;
   --font: #919191;
+  --titleColor:#8B542F;
 }
 html {
   scroll-behavior: smooth;
@@ -28,7 +29,7 @@ html {
 }
 
 .teks-primary {
-  color: var(--primary) !important;
+  color: #faaf18 !important;
 }
 
 .hidedesktop {
@@ -44,8 +45,13 @@ body {
   background-size: cover;
 }
 
+.title {
+  color: var(--titleColor);
+  font-family: FlameBold;
+  font-size: 32px;
+}
 .container {
-  font-family: "FlameRegular";
+  font-family: FlameRegular;
 }
 
 .list {
@@ -83,7 +89,7 @@ body {
   color: #fff;
   padding: 0px 16%;
   margin: 0px;
-  font-family: "FlameRegular";
+  font-family: FlameRegular;
 }
 
 .navbarBK .list-inline {
@@ -114,11 +120,11 @@ body {
 
 .navbarBK div:nth-child(3) {
   width: 100px;
-  margin-top: 80px;
   margin-left: 30px;
   background-color: none !important;
   background: none !important;
   font-size: 24px;
+  cursor: pointer;
 }
 
 .navbarBK div:nth-child(3) a {
@@ -246,7 +252,7 @@ body {
 .footer {
   background-color: var(--dark);
   color: var(--light);
-  font-family: 'FlameRegular';
+  font-family: FlameRegular;
   padding-top: 15px;
   padding-bottom: 10px;
   margin-top: 30px;
@@ -254,7 +260,7 @@ body {
 
 .footer__logo {
   font-size: 20px;
-  font-family: "FlameRegular";
+  font-family: FlameRegular;
 }
 
 .footer__call {
@@ -380,7 +386,7 @@ body {
     position: absolute;
     left: -30px;
     padding-left: 30px;
-    top: 240px;
+    top: 340px;
     background-color: #000;
   }
 
