@@ -14,6 +14,7 @@ const ProductSinglePage = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const cart = useSelector(state => state.cart)
+    console.log("cart",cart)
     let { slug } = useParams();
     const [qty, setQty] = useState(1)
     const [message, setMessage] = useState({
@@ -72,7 +73,7 @@ const ProductSinglePage = () => {
     }
 
     const addToCartFunc = () => {
-        if(cart && cart.length<1){
+        if(cart == null){
             addItemToCart()
         } else {
             if(cart){
@@ -89,7 +90,7 @@ const ProductSinglePage = () => {
                     addItemToCart()
                 }
             }
-        }
+        } 
     }
 
     const changeTotal = (value) => {
