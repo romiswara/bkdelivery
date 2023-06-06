@@ -7,8 +7,8 @@ import DialogCartComp from './DialogCartComp'
 import { useSelector } from 'react-redux'
 const NavbarComp = () => {
     const cart = useSelector(state => state.cart)
-    const navigate = useNavigate()
-    const [showSidebar, setShowSidebar] = useState(window.innerWidth>1200?true:false)
+    const navigate = useNavigate() 
+    const [showSidebar, setShowSidebar] = useState(window.innerWidth>1024?true:false)
     const [showDialogCart, setShowDialogCart] = useState(false)
     const [totalItem, setTotalItem] = useState(0)
     const [menus, setMenus] = useState([
@@ -42,7 +42,7 @@ const NavbarComp = () => {
 
     useLayoutEffect(() => {
         
-        if(window.innerWidth>1200){
+        if(window.innerWidth>1024){
             setShowSidebar(true)
         } else {
             setShowSidebar(false)
@@ -107,7 +107,7 @@ const NavbarComp = () => {
                 </ul>}
             </div>
             <div>
-            <div onClick={() => navigateTo('/accounts/login')}>Login</div>
+                {showSidebar && <div onClick={() => navigateTo('/accounts/login')}>Login</div>}
             </div>
             <div style={{ cursor: 'pointer' }} onClick={() => navigateTo('/cart')} onMouseOver={() => hoverFunc()} onMouseLeave={() => setShowDialogCart(false)}>
                 <CartComponent total={totalItem}></CartComponent>
