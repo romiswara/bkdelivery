@@ -14,7 +14,7 @@ const ProductSinglePage = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const cart = useSelector(state => state.cart)
-   
+
     let { slug } = useParams();
     const [qty, setQty] = useState(1)
     const [message, setMessage] = useState({
@@ -52,38 +52,38 @@ const ProductSinglePage = () => {
 
 
     const addItemToCart = () => {
-         dispatch(addCart({
+        dispatch(addCart({
             name: selectedVariant.name,
             price: selectedVariant.price,
             image: selectedVariant.image,
             qty: qty
-        }))  
+        }))
         window.scrollTo(0, 0);
-       setTimeout(() => {
-        setMessage({
-            message: "Product added to cart",
-            show: true,
-            background: 'green'
-        })
         setTimeout(() => {
             setMessage({
-                show: false,
-                message: "",
-                background: ""
+                message: "Product added to cart",
+                show: true,
+                background: 'green'
             })
-        }, 1000)
-       },100)
+            setTimeout(() => {
+                setMessage({
+                    show: false,
+                    message: "",
+                    background: ""
+                })
+            }, 1000)
+        }, 100)
     }
 
     const addToCartFunc = () => {
-        if(cart == null){
+        if (cart == null) {
             addItemToCart()
         } else {
-            if(cart){
+            if (cart) {
                 let exist = cart.find(c => {
                     return c.name == selectedVariant.name
                 })
-                if(exist){
+                if (exist) {
                     setMessage({
                         show: true,
                         message: "Product already in cart",
@@ -93,7 +93,7 @@ const ProductSinglePage = () => {
                     addItemToCart()
                 }
             }
-        } 
+        }
     }
 
     const changeTotal = (value) => {
@@ -114,23 +114,25 @@ const ProductSinglePage = () => {
                     {product.map((data, index) => {
                         return <MenuComp key={index} data={data} clickMenuCB={navigateMenuFunc} />
                     })}
+                  <div className='mb-5'>
                     <small>* Harga belum termasuk pajak</small>
+                  </div>
                 </Col>
                 <Col md={9} sm={12}>
-                    <div className='card' style={{padding:'20px'}}>
-                    <div style={{ display: 'flex' }}>
-                        <div style={{ flex: 1 }}>
-                            <h2>{selectedVariant.name}</h2>
-                            <img src={selectedVariant.image} className='img-fluid' />
-                        </div>
-                        <div style={{ flex: 1 }}>
-                            <h3>{selectedVariant.price}</h3>
-                            <CounterComp value={qty} totalCB={changeTotal}></CounterComp>
-                            <div className='mt-4'>
-                                <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />
-                            </div>
-                        </div>
-                    </div>
+                    <div className='card' style={{ padding: '20px' }}>
+                        <Row>
+                            <Col md={6} sm={12} xs={12}>
+                                <h2>{selectedVariant.name}</h2>
+                                <img src={selectedVariant.image} className='img-fluid mb-3' />
+                            </Col>
+                            <Col md={6} sm={12} xs={12}>
+                                <h3>{selectedVariant.price}</h3>
+                                <CounterComp value={qty} totalCB={changeTotal}></CounterComp>
+                                <div className='mt-4'>
+                                    <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />
+                                </div>
+                            </Col>
+                        </Row>
                     </div>
                 </Col>
             </Row>
