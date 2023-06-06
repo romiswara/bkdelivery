@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 const NavbarComp = () => {
     const cart = useSelector(state => state.cart)
     const navigate = useNavigate()
-    const [showSidebar, setShowSidebar] = useState(false)
+    const [showSidebar, setShowSidebar] = useState(window.innerWidth>1200?true:false)
     const [showDialogCart, setShowDialogCart] = useState(false)
     const [totalItem, setTotalItem] = useState(0)
     const [menus, setMenus] = useState([
@@ -40,9 +40,15 @@ const NavbarComp = () => {
         }, 1000)
     }
 
-    // useLayoutEffect(() => {
-    //     setShowSidebar(true)
-    // }, [])
+    useLayoutEffect(() => {
+        alert("df")
+        if(window.innerWidth>1200){
+            setShowSidebar(true)
+        } else {
+            setShowSidebar(false)
+        }
+      
+    }, [])
 
     useEffect(() => {
         if (cart) {
@@ -89,7 +95,7 @@ const NavbarComp = () => {
                 <img src="./../assets/logo.png" alt="logo" className='logo' onClick={() => navigateTo("/")} />
             </div>
             <div>
-            <ul className='list'>
+          {showSidebar &&   <ul className='list'>
                     {menus.map((menu, index) => {
                         return <li key={index} className={menu.menu == "Home" ? 'list-inline hidedesktop' : 'list-inline'} onClick={() => navigateTo(menu.path)}>
                             <ul>
@@ -98,11 +104,10 @@ const NavbarComp = () => {
                             </ul>
                         </li>
                     })}
-                </ul>
+                </ul>}
             </div>
             <div>
-                {showSidebar && <div onClick={() => navigateTo('/accounts/login')}>Login</div>}
-
+            <div onClick={() => navigateTo('/accounts/login')}>Login</div>
             </div>
             <div style={{ cursor: 'pointer' }} onClick={() => navigateTo('/cart')} onMouseOver={() => hoverFunc()} onMouseLeave={() => setShowDialogCart(false)}>
                 <CartComponent total={totalItem}></CartComponent>

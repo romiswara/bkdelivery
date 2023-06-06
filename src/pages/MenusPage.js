@@ -49,7 +49,7 @@ const MenusPage = () => {
                 <Col md={9} sm={12}>
                    <Row>
                    {listProduct.map((product, index) => {
-                        return <Col md={6} sm={12}>
+                        return <Col md={6} sm={6} xs={6}>
                             <ProductComp data={product} showButton={false} path="products"></ProductComp>
                         </Col>
                     })}
