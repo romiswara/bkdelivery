@@ -19,15 +19,16 @@ const NewsDetailPage = () => {
             }
         }
     }, [slug])
-    console.log("promotions", promotions)
+   
     useEffect(() => {
-        console.log("news",news)
-    },[news])
+        window.scrollTo(0, 0);
+    },[])
+    
     return (<Layout>
-        <Container>
+        <Container className='mt-5'>
             <Row>
                 <Col md={6}>
-                    <h2>{news.title}</h2>
+                    <h4 className='title'>{news.title}</h4>
                     <p>Syarat dan Ketentuan:</p>
                     <ul>
                         {news && news?.syarat.map((syarat, index) => {

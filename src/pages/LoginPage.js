@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Layout from '../Layout'
 import { Col, Container, Row } from 'react-bootstrap'
 import InputComp from '../components/global/InputComp'
@@ -63,6 +63,10 @@ const LoginPage = () => {
     const navigateRegister = () => {
         navigate("/accounts/register");
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return <Layout>
          {message.show && <MessageComp background={message.background} message={message.message}></MessageComp>}
         <Container className='mt-5'>

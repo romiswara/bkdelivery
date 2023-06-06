@@ -6,7 +6,7 @@ const CounterComp = ({ totalCB}) => {
 
     const [total, setTotal] = useState(1)
     const decrementFunc = () => {
-        if(total<1){
+        if(total>1){
             setTotal(parseInt(total) - 1)
         }
     }

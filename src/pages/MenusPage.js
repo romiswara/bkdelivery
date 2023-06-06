@@ -32,7 +32,10 @@ const MenusPage = () => {
         navigate(`/menus/${data.slug}`);
     }
 
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
+    
     return <Layout>
         <Container className='pt-5'>
             <Row>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CarouselComp from '../components/CarouselComp'
 import { Container, Row, Col } from 'react-bootstrap'
 import ProductComp from '../components/ProductComp'
@@ -7,6 +7,10 @@ import Layout from '../Layout'
 import './../App.css';
 const HomePage = () => {
     const [productList, setProductList] = useState(product)
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (<Layout>
 
         <CarouselComp></CarouselComp>

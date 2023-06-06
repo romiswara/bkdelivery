@@ -43,8 +43,8 @@ const FooterComp = () => {
                     </div>
                 </div>
                 <div className='footer__link'>
-                    {menus.map(menu => {
-                        return <div>{menu.label}</div>
+                    {menus.map((menu,index) => {
+                        return <div key={index}>{menu.label}</div>
                     })}
                 </div>
 

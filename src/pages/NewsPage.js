@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import promotions from './../data/promotions.json'
 import Layout from '../Layout'
 import { Col, Container, Row } from 'react-bootstrap'
@@ -9,6 +9,10 @@ const NewsPage = () => {
     const navigateFunc = (p) => {
         navigate(`/news/${p.slug}`)    
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
 
     return <Layout>
         <Container className='mt-2'>

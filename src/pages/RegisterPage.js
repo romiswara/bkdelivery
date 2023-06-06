@@ -38,6 +38,10 @@ const RegisterPage = () => {
     }, [data])
 
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
+
     return <Layout>
         <Container className='mt-5'>
             <Row>
