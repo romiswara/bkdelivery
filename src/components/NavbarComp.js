@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 const NavbarComp = () => {
     const cart = useSelector(state => state.cart)
     const navigate = useNavigate()
-    const [showSidebar, setShowSidebar] = useState(true)
+    const [showSidebar, setShowSidebar] = useState(false)
     const [showDialogCart, setShowDialogCart] = useState(false)
     const [totalItem, setTotalItem] = useState(0)
     const [menus, setMenus] = useState([
@@ -34,16 +34,19 @@ const NavbarComp = () => {
     }
 
     const navigateTo = (path) => {
-        navigate(path);
+        setShowSidebar(false)
+        setTimeout(() => {
+            navigate(path);
+        }, 1000)
     }
 
-    useLayoutEffect(() => {
-        setShowSidebar(true)
-    }, [])
+    // useLayoutEffect(() => {
+    //     setShowSidebar(true)
+    // }, [])
 
     useEffect(() => {
         if (cart) {
-          setTotalItem(cart.length)
+            setTotalItem(cart.length)
         }
     }, [cart])
 
@@ -74,8 +77,10 @@ const NavbarComp = () => {
     }, [showSidebar])
 
     const hoverFunc = () => {
-  
-        setShowDialogCart(true)
+        if (window.innerWidth > 1100) {
+            setShowDialogCart(true)
+        }
+
     }
 
     return <>
@@ -84,7 +89,7 @@ const NavbarComp = () => {
                 <img src="./../assets/logo.png" alt="logo" className='logo' onClick={() => navigateTo("/")} />
             </div>
             <div>
-                {showSidebar && <ul className='list'>
+            <ul className='list'>
                     {menus.map((menu, index) => {
                         return <li key={index} className={menu.menu == "Home" ? 'list-inline hidedesktop' : 'list-inline'} onClick={() => navigateTo(menu.path)}>
                             <ul>
@@ -93,8 +98,7 @@ const NavbarComp = () => {
                             </ul>
                         </li>
                     })}
-                </ul>}
-
+                </ul>
             </div>
             <div>
                 {showSidebar && <div onClick={() => navigateTo('/accounts/login')}>Login</div>}
@@ -108,7 +112,7 @@ const NavbarComp = () => {
                 {showSidebar ? <FontAwesomeIcon icon={faXmark} className='navbarBK__toggle' /> : <FontAwesomeIcon icon={faBars} className='navbarBK__toggle ' />}
             </div>
         </div>
-       
+
     </>
 }
 
