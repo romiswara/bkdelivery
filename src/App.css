@@ -60,7 +60,10 @@ body {
   font-family: FlameRegular;
   font-size: 32px;
 }
-
+.nopaddingbottom {
+  margin: 0px;
+  padding-bottom: 0px;
+}
 .forget {
   color: #ED7802 !important;
 }

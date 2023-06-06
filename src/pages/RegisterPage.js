@@ -49,10 +49,10 @@ const RegisterPage = () => {
                     span: 6,
                     offset: 3
                 }} >
-                    <div className="card" >
+                       <div className="card loginbox nopaddingbottom" >
                         <div className="card-body">
-                            <h5 className="title text-center">Register</h5>
-                            <p className="card-subtitle mb-5 mt-3 text-center">Please enter your mobile number to register</p>
+                            <h5 className="title-reg text-center">Register</h5>
+                            <p className="card-subtitle mb-4 mt-3 text-center">Please enter your mobile number to register</p>
                             <InputComp
                                 type="text"
                                 placeholder="Full Name"
@@ -78,10 +78,12 @@ const RegisterPage = () => {
                                     />
                                 </li>
                                 <li className='list-inline'>
+                                    <div style={{marginLeft:'10px'}}>
                                     <RadioComp
                                         label="Female"
                                         onchangeValue={(value) => changeData("gender", "female")}
                                     />
+                                    </div>
                                 </li>
 
                             </ul>
@@ -90,16 +92,15 @@ const RegisterPage = () => {
                                 placeholder="Password"
                                 onchangeValue={(value) => changeData("password", value)}>
                             </InputComp>
-
                             <ButtonComp text="Register"
                                 width="100%"
                                 className="button-primary"
                                 onClickCB={submitFunc}
                             />
-                            <div className='text-center'>
+                        </div>
+                        <div className='text-center' style={{marginBottom:'-20px'}}>
                                 <img src="./../assets/bg.jpg" />
                             </div>
-                        </div>
                     </div>
                 </Col>
             </Row>
