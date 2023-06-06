@@ -62,6 +62,10 @@ const ProductSinglePage = () => {
         setQty(value)
     }
 
+
+    const kecart = () => {
+        navigate("/cart")
+    }
     return <Layout>
         <Container className='mt-5'>
             <Row>
@@ -83,6 +87,7 @@ const ProductSinglePage = () => {
                             <CounterComp totalCB={changeTotal}></CounterComp>
                            <div className='mt-4'>
                            <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />
+                           <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => kecart()} />
                            </div>
                         </div>
                     </div>

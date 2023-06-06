@@ -88,7 +88,7 @@ const NavbarComp = () => {
             {showSidebar && <div onClick={() => navigateTo('/accounts/login')}>Login</div> }
          
         </div>
-        <div>
+        <div style={{cursor:'pointer'}} onClick={() => navigateTo('/cart')}>
             <CartComponent></CartComponent>
         </div>
         <div onClick={() => sidebarFunc()} onMouseOver={() => setShowDialogCart(true)} onMouseLeave={() => setShowDialogCart(false)}>
