@@ -120,7 +120,7 @@ const ProductSinglePage = () => {
                         </div>
                         <div style={{ flex: 1 }}>
                             <h3>{selectedVariant.price}</h3>
-                            <CounterComp totalCB={changeTotal}></CounterComp>
+                            <CounterComp value={qty} totalCB={changeTotal}></CounterComp>
                             <div className='mt-4'>
                                 <ButtonComp className="button-primary" width="100%" text="Add To Cart" onClickCB={() => addToCartFunc()} />
                             </div>

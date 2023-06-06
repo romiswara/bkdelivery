@@ -1,4 +1,4 @@
-import { ADD_CART, DELETE_CART } from "../constants/cartConstants"
+import { ADD_CART, DELETE_CART, UPDATE_CART } from "../constants/cartConstants"
 
 export const addCart = (data) => async (dispatch) => {
     dispatch({
@@ -29,5 +29,24 @@ export const deleteCart = (name) => async (dispatch) => {
         if(selectedData){
             await localStorage.setItem('cart',JSON.stringify(selectedData))
         }
+    } 
+}
+
+
+export const updateCart = (payload) => async (dispatch) => {
+    dispatch({
+        type: UPDATE_CART,
+        payload: payload
+    })
+    let cartItem = await localStorage.getItem('cart')
+    if(cartItem){
+        cartItem = JSON.parse(cartItem)
+        let selectedData = cartItem.filter(item => {
+            if(item.name == payload.name){
+                item.qty = payload.qty
+            } 
+            return item
+        })
+        await localStorage.setItem('cart',JSON.stringify(selectedData))
     } 
 }

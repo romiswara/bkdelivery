@@ -5,13 +5,17 @@ import CounterComp from './CounterComp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import ButtonComp from './global/ButtonComp'
-import { deleteCart } from '../redux/actions/cartAction'
+import { deleteCart, updateCart } from '../redux/actions/cartAction'
 
 const CheckoutStep1Comp = () => {
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
-    const totalCB = (total, index) => {
-
+    const totalCB = (total, variants) => {
+        let payload = {
+            name:variants.name,
+            qty:total
+        }
+        dispatch(updateCart(payload))
     }
 
     const navigateToLoginFunc = () => {
@@ -51,7 +55,7 @@ const CheckoutStep1Comp = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    <CounterComp totalCB={(total) => totalCB(total, index)}></CounterComp>
+                                    <CounterComp value={c.qty} totalCB={(total) => totalCB(total, c)}></CounterComp>
                                 </td>
                                 <td>
                                     <div style={{ display: 'flex' }}>
