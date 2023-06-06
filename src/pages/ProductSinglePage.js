@@ -72,7 +72,7 @@ const ProductSinglePage = () => {
     }
 
     const addToCartFunc = () => {
-        if(cart.length<1){
+        if(cart && cart.length<1){
             addItemToCart()
         } else {
             if(cart){
