@@ -14,12 +14,12 @@ const ProductSinglePage = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const cart = useSelector(state => state.cart)
-    console.log("cart",cart)
+   
     let { slug } = useParams();
     const [qty, setQty] = useState(1)
     const [message, setMessage] = useState({
         show: true,
-        message: "sdfsdfsdf",
+        message: "",
         background: ''
     })
     const [selectedVariant, setSelectedVariant] = useState({})
@@ -58,6 +58,8 @@ const ProductSinglePage = () => {
             image: selectedVariant.image,
             qty: qty
         }))  
+        window.scrollTo(0, 0);
+       setTimeout(() => {
         setMessage({
             message: "Product added to cart",
             show: true,
@@ -70,6 +72,7 @@ const ProductSinglePage = () => {
                 background: ""
             })
         }, 1000)
+       },100)
     }
 
     const addToCartFunc = () => {
