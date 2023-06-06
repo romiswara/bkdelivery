@@ -32,13 +32,14 @@ const CounterComp = ({ value,totalCB}) => {
         <div onClick={decrementFunc} style={{ width: '30px', textAlign: 'center' }}>
             <FontAwesomeIcon icon={faMinus} color='#ED7802' />
         </div>
-        <div>
+        <div style={{flex:1}}>
 
             <Form.Control
                 type="number"
-                style={{textAlign:'center'}}
+                style={{textAlign:'center',borderRadius:'0px'}}
                 onChange={($e) => onchangeValue($e.target.value)}
                 value={total}
+              
             />
         </div>
         <div onClick={incrementFunc} style={{ width: '30px', textAlign: 'center' }}>

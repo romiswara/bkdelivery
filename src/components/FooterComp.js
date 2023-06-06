@@ -32,7 +32,7 @@ const FooterComp = () => {
                         <FontAwesomeIcon icon={faPhone} />
                         1500025
                     </div>
-                    <div>
+                    <div className='regularfont'>
                         <FontAwesomeIcon icon={faEnvelope} /> guestservice@burgerking.co.id
                     </div>
                     <div>

@@ -78,7 +78,7 @@ const LoginPage = () => {
                 }} >
                     <div className="card loginbox" >
                         <div className="card-body">
-                            <h5 className="text-center title mt-3">Welcome!</h5>
+                            <h5 className="text-center title-reg mt-3">Welcome!</h5>
                             <p className="card-subtitle mb-5 mt-3 text-center">Enter your mobile number and password to login</p>
                             <InputComp
                                 type="text"

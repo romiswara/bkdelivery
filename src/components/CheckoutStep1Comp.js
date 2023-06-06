@@ -45,7 +45,7 @@ const CheckoutStep1Comp = () => {
                             <td>Subtotal</td>
                         </tr>
                         {cart && cart.map((c, index) => {
-                            return <tr>
+                            return <tr >
                                 <td>
                                     <div style={{ display: 'flex' }}>
                                         <div style={{ width: '30px' }}>
@@ -56,8 +56,10 @@ const CheckoutStep1Comp = () => {
                                         </div>
                                     </div>
                                 </td>
-                                <td>
+                                <td >
+                                    <div style={{marginTop:'-4px'}}>
                                     <CounterComp value={c.qty} totalCB={(total) => totalCB(total, c)}></CounterComp>
+                                    </div>
                                 </td>
                                 <td>
                                     <div style={{ display: 'flex' }}>
