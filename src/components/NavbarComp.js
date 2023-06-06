@@ -41,7 +41,7 @@ const NavbarComp = () => {
     }
 
     useLayoutEffect(() => {
-        alert("df")
+        
         if(window.innerWidth>1200){
             setShowSidebar(true)
         } else {
