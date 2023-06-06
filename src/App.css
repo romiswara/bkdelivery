@@ -65,7 +65,7 @@ body {
   padding-bottom: 0px;
 }
 .regularfont {
-  font-family: FlameRegular;
+   font-family: FlameRegular;
 }
 
 .forget {
@@ -220,6 +220,10 @@ body {
   right: 20px;
   padding-bottom: 4px;
 }
+.cart__notif small {
+  font-size: 16px;
+}
+
 .loginbox {
   padding: 20px !important;
   border-radius: 10px !important;
@@ -440,8 +444,17 @@ body {
   .cart__notif {
     position: absolute;
     margin-left: 60px !important;
-    margin-top: -50px !important;
+    margin-top: -45px !important;
     text-align: center;
+    width: 25px;
+    height: 25px;
+    padding: 0px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .cart__notif small {
+    margin-left: -30px;
+    font-size: 16px;
   }
 
   .menu-box {

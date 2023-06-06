@@ -6,7 +6,9 @@ const CartComponent = ({total}) => {
     return <div className='cart'>
         <div className='cart__wrapper'>
             <FontAwesomeIcon icon={faCartArrowDown} className='cart__icon' />
-            {total >0 &&   <div className='cart__notif' style={{position:'absolute',background:'red'}}>{total}</div>}
+            {total >0 &&  <div className='cart__notif'>
+                <small>{total}</small>    
+            </div>}
           
         </div>
 
