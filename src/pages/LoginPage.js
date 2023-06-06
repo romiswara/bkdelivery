@@ -65,7 +65,7 @@ const LoginPage = () => {
     }
     return <Layout>
          {message.show && <MessageComp background={message.background} message={message.message}></MessageComp>}
-        <Container>
+        <Container className='mt-5'>
            
             <Row>
                 <Col md={{
@@ -74,8 +74,8 @@ const LoginPage = () => {
                 }} >
                     <div className="card" >
                         <div className="card-body">
-                            <h5 className="card-title text-center">Welcome!</h5>
-                            <h6 className="card-subtitle mb-2 text-muted text-center">Enter your mobile number and password to login</h6>
+                            <h5 className="text-center title">Welcome!</h5>
+                            <p className="card-subtitle mb-5 mt-3 text-center">Enter your mobile number and password to login</p>
                             <InputComp
                                 type="text"
                                 groupText="+62"
@@ -92,16 +92,16 @@ const LoginPage = () => {
                                 className="button-primary"
                                 onClickCB={submitFunc}
                             />
-                            <p>Forget Password?</p>
+                            <p className='text-primary' style={{cursor:'pointer'}}>Forget Password?</p>
                             <div>
-                                <h2>Not A Member Yet?</h2>
+                                <h5 className='title'>Not A Member Yet?</h5>
                                 <Row>
                                     <Col md={8}>
                                         <p>Register to get reward points and exclusive promotions.</p>
                                     </Col>
                                     <Col md={4}>
                                         <ButtonComp text="Register" className="button-primary"
-                                            onClickCB={navigateRegister} />
+                                            onClickCB={navigateRegister} width="100%" />
                                     </Col>
                                 </Row>
                             </div>

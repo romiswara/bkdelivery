@@ -39,16 +39,16 @@ const RegisterPage = () => {
 
 
     return <Layout>
-        <Container>
+        <Container className='mt-5'>
             <Row>
                 <Col md={{
-                    span: 4,
-                    offset: 4
+                    span: 6,
+                    offset: 3
                 }} >
                     <div className="card" >
                         <div className="card-body">
-                            <h5 className="card-title text-center">Register</h5>
-                            <h6 className="card-subtitle mb-2 text-muted text-center">Please enter your mobile number to register</h6>
+                            <h5 className="title text-center">Register</h5>
+                            <p className="card-subtitle mb-5 mt-3 text-center">Please enter your mobile number to register</p>
                             <InputComp
                                 type="text"
                                 placeholder="Full Name"

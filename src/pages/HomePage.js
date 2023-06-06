@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import ProductComp from '../components/ProductComp'
 import product from './../data/product.json'
 import Layout from '../Layout'
+import './../App.css';
 const HomePage = () => {
     const [productList, setProductList] = useState(product)
     return (<Layout>

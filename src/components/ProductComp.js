@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Row, Col } from 'react-bootstrap'
 import ButtonComp from './global/ButtonComp'
 import { useNavigate } from 'react-router-dom'
-
+import './../App.css';
 const ProductComp = ({ data }) => {
     const navigate = useNavigate();
     const onClickFunc = (name) => {
