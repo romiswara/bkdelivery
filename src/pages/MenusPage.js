@@ -42,7 +42,7 @@ const MenusPage = () => {
                 <Col md={3} sm={12}>
                     <SearchComp />
                     {product.map((data, index) => {
-                        return <MenuComp key={index} data={data} clickMenuCB={navigateMenuFunc} />
+                        return <MenuComp key={index} data={data} clickMenuCB={navigateMenuFunc} active={slug}/>
                 })}
                     <small>* Harga belum termasuk pajak</small>
                 </Col>
