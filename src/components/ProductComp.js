@@ -16,7 +16,7 @@ const ProductComp = ({ data,showButton ,path}) => {
         <Row>
             <Col md={showButton?6:12}>
                 <h5 style={{ textAlign: 'left' }}>{data.name}</h5>
-                {data.price != undefined && <h5 style={{ textAlign: 'left' }}>{data.price}</h5>}
+                {data.price != undefined && <p style={{ textAlign: 'left' ,color:'#8B542F',fontSize:'18px'}} className='regularfont'>{data.price}</p>}
             </Col>
             {showButton &&  <Col md={6}>
                 <ButtonComp width="100%" className="button-primary" text="Order" onClickCB={() => onClickFunc(path=="menus"?data.slug:data.name)}></ButtonComp>

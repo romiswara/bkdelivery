@@ -10,10 +10,10 @@ const HomePage = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    },[])
+    }, [])
     return (<Layout>
-
         <CarouselComp></CarouselComp>
+        <div className='bgwrapper'>
         <Container>
             <Row>
                 <Col md={12}>
@@ -26,6 +26,7 @@ const HomePage = () => {
                 })}
             </Row>
         </Container>
+        </div>
 
     </Layout>
     )
