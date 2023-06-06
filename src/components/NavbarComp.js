@@ -73,6 +73,11 @@ const NavbarComp = () => {
         }
     }, [showSidebar])
 
+    const hoverFunc = () => {
+  
+        setShowDialogCart(true)
+    }
+
     return <>
         <div className='navbarBK'>
             <div>
@@ -95,14 +100,15 @@ const NavbarComp = () => {
                 {showSidebar && <div onClick={() => navigateTo('/accounts/login')}>Login</div>}
 
             </div>
-            <div style={{ cursor: 'pointer' }} onClick={() => navigateTo('/cart')}>
+            <div style={{ cursor: 'pointer' }} onClick={() => navigateTo('/cart')} onMouseOver={() => hoverFunc()} onMouseLeave={() => setShowDialogCart(false)}>
                 <CartComponent total={totalItem}></CartComponent>
+                {showDialogCart && <DialogCartComp cart={cart}></DialogCartComp>}
             </div>
-            <div onClick={() => sidebarFunc()} onMouseOver={() => setShowDialogCart(true)} onMouseLeave={() => setShowDialogCart(false)}>
+            <div onClick={() => sidebarFunc()} >
                 {showSidebar ? <FontAwesomeIcon icon={faXmark} className='navbarBK__toggle' /> : <FontAwesomeIcon icon={faBars} className='navbarBK__toggle ' />}
             </div>
         </div>
-        {showDialogCart && <DialogCartComp cart={cart}></DialogCartComp>}
+       
     </>
 }
 

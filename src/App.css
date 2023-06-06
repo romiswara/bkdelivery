@@ -403,7 +403,7 @@ body {
   .cart__wrapper {
     width: 100%;
     position: relative;
-    background: green;
+    /* background: green; */
   }
 
   .cart__notif {
@@ -435,14 +435,18 @@ body {
 
   .footer__call div:first-child {
     width: 100%;
+    font-size: 26px;
+    margin-bottom: 15px;
   }
 
   .footer__call div:nth-child(2) {
     width: 100%;
+    margin-bottom: 15px;
   }
 
   .footer__call div:nth-child(3) {
     width: 100%;
+    font-size: 30px;
   }
 
   .footer__link {
@@ -452,7 +456,8 @@ body {
   }
 
   .footer__link div:nth-child(1) {
-    margin: 5px 10px;
+    margin: 8px 10px;
+    font-size: 16px;
     color: #fff;
     border-right: solid 0px #919191;
   }
@@ -460,12 +465,16 @@ body {
   .footer__link div:nth-child(2) {
     margin: 5px 10px;
     color: #fff;
+    margin: 8px 10px;
+    font-size: 16px;
     border-right: solid 0px #919191;
   }
 
   .footer__link div:nth-child(3) {
     margin: 5px 10px;
     color: #fff;
+    margin: 8px 10px;
+    font-size: 16px;
     border-right: solid 0px #919191;
   }
 
